@@ -1,0 +1,1310 @@
+type sample_L1
+pb 4000000.0
+clip_bound 20.0
+log_path log/Alexnet/0/sample_L1/True
+train_data data
+test_data data
+batch_size 64
+test_batch_size 64
+lr 0.0002
+momentum 0.5
+no_cuda False
+seed 1
+log_interval 1
+privacy_delta 1e-06
+sample_num 500
+islog True
+is_ratio_list True
+num_clients 2
+num_rounds 10
+epochs 1
+ratio_type 0
+按照权重分配eps
+权重越大,eps越大,噪声越小
+device cuda
+loading data
+load data done
+AlexNet(
+  (conv1): Sequential(
+    (0): Conv2d(3, 96, kernel_size=(6, 6), stride=(1, 1))
+    (1): ReLU()
+  )
+  (conv2): Sequential(
+    (0): Conv2d(96, 256, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(256, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+  )
+  (conv4): Sequential(
+    (0): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+  )
+  (conv5): Sequential(
+    (0): Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (dense): Sequential(
+    (0): Linear(in_features=9216, out_features=4096, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU()
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=4096, out_features=10, bias=True)
+  )
+)
+********start training********
+******client id  0 ******
+client_update start
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 10 ,loss= 2.288752317428589
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 20 ,loss= 2.192138671875
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 30 ,loss= 2.000901699066162
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 40 ,loss= 2.183114528656006
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 50 ,loss= 2.0797500610351562
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 60 ,loss= 2.1695640087127686
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 70 ,loss= 2.0590312480926514
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 80 ,loss= 2.017382860183716
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 90 ,loss= 1.8128666877746582
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 100 ,loss= 1.7973899841308594
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 110 ,loss= 1.8291914463043213
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 120 ,loss= 1.9376752376556396
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 130 ,loss= 1.8389185667037964
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 140 ,loss= 1.8847683668136597
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 150 ,loss= 1.668054461479187
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 160 ,loss= 1.8313746452331543
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 170 ,loss= 1.7851879596710205
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 180 ,loss= 1.6962485313415527
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 190 ,loss= 1.5097832679748535
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 200 ,loss= 1.6628179550170898
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 210 ,loss= 1.5990393161773682
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 220 ,loss= 1.5333788394927979
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 230 ,loss= 1.5668610334396362
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 240 ,loss= 1.684249997138977
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 250 ,loss= 1.615700125694275
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 260 ,loss= 1.466630220413208
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 270 ,loss= 1.5155909061431885
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 280 ,loss= 1.6184417009353638
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 290 ,loss= 1.464288353919983
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 300 ,loss= 1.5445798635482788
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 310 ,loss= 1.334122657775879
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 320 ,loss= 1.3931177854537964
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 330 ,loss= 1.4529491662979126
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 340 ,loss= 1.4606250524520874
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 350 ,loss= 1.4960474967956543
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 360 ,loss= 1.529236912727356
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 370 ,loss= 1.4328148365020752
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 380 ,loss= 1.2830730676651
+client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 390 ,loss= 1.5090556144714355
+******client id  1 ******
+client_update start
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 10 ,loss= 2.2637319564819336
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 20 ,loss= 2.154175043106079
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 30 ,loss= 2.181122064590454
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 40 ,loss= 2.0862839221954346
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 50 ,loss= 2.0667123794555664
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 60 ,loss= 1.8871568441390991
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 70 ,loss= 1.6924664974212646
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 80 ,loss= 1.8746540546417236
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 90 ,loss= 1.7136385440826416
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 100 ,loss= 1.7842273712158203
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 110 ,loss= 1.6937836408615112
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 120 ,loss= 1.7744241952896118
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 130 ,loss= 1.88412606716156
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 140 ,loss= 1.8791041374206543
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 150 ,loss= 1.9676034450531006
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 160 ,loss= 1.6890732049942017
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 170 ,loss= 1.6849391460418701
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 180 ,loss= 1.6240613460540771
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 190 ,loss= 1.7286224365234375
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 200 ,loss= 1.6168396472930908
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 210 ,loss= 1.6567000150680542
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 220 ,loss= 1.5272870063781738
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 230 ,loss= 1.744980812072754
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 240 ,loss= 1.472679615020752
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 250 ,loss= 1.5387505292892456
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 260 ,loss= 1.4395253658294678
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 270 ,loss= 1.5330312252044678
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 280 ,loss= 1.4690032005310059
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 290 ,loss= 1.6561083793640137
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 300 ,loss= 1.5593218803405762
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 310 ,loss= 1.4689812660217285
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 320 ,loss= 1.4014335870742798
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 330 ,loss= 1.3680872917175293
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 340 ,loss= 1.4982469081878662
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 350 ,loss= 1.5313118696212769
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 360 ,loss= 1.5981371402740479
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 370 ,loss= 1.4152655601501465
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 380 ,loss= 1.4331300258636475
+client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 390 ,loss= 1.5520963668823242
+start add noise2021-06-28 17:24:30
+start cal weight time2021-06-28 17:24:30
+end cal weight time2021-06-28 17:24:30
+layer= 0 ratio= 0.21039152934003333
+layer= 1 ratio= 0.21174893668767134
+layer= 2 ratio= 0.04709781421161101
+layer= 3 ratio= 0.0502175178130981
+layer= 4 ratio= 0.04780794282652604
+layer= 5 ratio= 0.05761583694207364
+layer= 6 ratio= 0.03994983460560541
+layer= 7 ratio= 0.05031699196412889
+layer= 8 ratio= 0.03961841203594912
+layer= 9 ratio= 0.04982312600337749
+layer= 10 ratio= 0.024532082047915328
+layer= 11 ratio= 0.026425402670486188
+layer= 12 ratio= 0.03525815656763922
+layer= 13 ratio= 0.03879532865973447
+layer= 14 ratio= 0.03701306776915094
+layer= 15 ratio= 0.03338801985499952
+end_add_noise_time2021-06-28 17:24:34
+start add noise2021-06-28 17:24:34
+start cal weight time2021-06-28 17:24:34
+end cal weight time2021-06-28 17:24:34
+layer= 0 ratio= 0.21095924062827096
+layer= 1 ratio= 0.21144652700355338
+layer= 2 ratio= 0.0469613807897624
+layer= 3 ratio= 0.04882032659692419
+layer= 4 ratio= 0.047740226595887426
+layer= 5 ratio= 0.0590470133890376
+layer= 6 ratio= 0.039792887823888616
+layer= 7 ratio= 0.051325485169433784
+layer= 8 ratio= 0.03961422814355246
+layer= 9 ratio= 0.04837663441220667
+layer= 10 ratio= 0.024718751042564414
+layer= 11 ratio= 0.02682754864355412
+layer= 12 ratio= 0.035436714045139144
+layer= 13 ratio= 0.038791483092987654
+layer= 14 ratio= 0.03744987967105829
+layer= 15 ratio= 0.03269167295217893
+end_add_noise_time2021-06-28 17:24:38
+average train loss= 1.715603769435297
+2021-06-28 17:24:48,round 1,val Accuracy Top1: 16.820000 %
+2021-06-28 17:24:48,round 1,val Accuracy Top5: 73.050000 %
+******client id  0 ******
+client_update start
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 10 ,loss= 1.6565078496932983
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 20 ,loss= 1.6864304542541504
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 30 ,loss= 1.7648475170135498
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 40 ,loss= 1.7536113262176514
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 50 ,loss= 1.8750741481781006
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 60 ,loss= 1.3967148065567017
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 70 ,loss= 1.398762822151184
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 80 ,loss= 1.3652071952819824
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 90 ,loss= 1.2352821826934814
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 100 ,loss= 1.323241949081421
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 110 ,loss= 1.2217768430709839
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 120 ,loss= 1.1673262119293213
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 130 ,loss= 1.3413041830062866
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 140 ,loss= 1.62014639377594
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 150 ,loss= 1.4304959774017334
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 160 ,loss= 1.1315040588378906
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 170 ,loss= 1.2922033071517944
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 180 ,loss= 1.3247321844100952
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 190 ,loss= 1.2366600036621094
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 200 ,loss= 1.345723032951355
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 210 ,loss= 1.2984540462493896
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 220 ,loss= 1.3646959066390991
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 230 ,loss= 1.083981990814209
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 240 ,loss= 1.097124695777893
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 250 ,loss= 1.2240571975708008
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 260 ,loss= 1.3239861726760864
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 270 ,loss= 1.0832124948501587
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 280 ,loss= 1.1370975971221924
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 290 ,loss= 1.0374637842178345
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 300 ,loss= 1.2345162630081177
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 310 ,loss= 1.6834768056869507
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 320 ,loss= 1.2511827945709229
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 330 ,loss= 1.253056287765503
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 340 ,loss= 0.9579262733459473
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 350 ,loss= 1.1627548933029175
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 360 ,loss= 1.4730504751205444
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 370 ,loss= 1.2145878076553345
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 380 ,loss= 1.325190544128418
+client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 390 ,loss= 1.026751160621643
+******client id  1 ******
+client_update start
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 10 ,loss= 1.7034854888916016
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 20 ,loss= 1.7365107536315918
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 30 ,loss= 1.6150329113006592
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 40 ,loss= 1.5002928972244263
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 50 ,loss= 1.6548198461532593
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 60 ,loss= 1.4303691387176514
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 70 ,loss= 1.5204694271087646
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 80 ,loss= 1.7237029075622559
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 90 ,loss= 1.5606930255889893
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 100 ,loss= 1.5345994234085083
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 110 ,loss= 1.360135555267334
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 120 ,loss= 1.1035579442977905
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 130 ,loss= 1.2956490516662598
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 140 ,loss= 1.4392973184585571
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 150 ,loss= 1.379030704498291
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 160 ,loss= 1.3238928318023682
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 170 ,loss= 1.5081803798675537
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 180 ,loss= 1.2668066024780273
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 190 ,loss= 1.135697841644287
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 200 ,loss= 1.358489751815796
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 210 ,loss= 1.227226734161377
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 220 ,loss= 1.32452392578125
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 230 ,loss= 1.2384473085403442
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 240 ,loss= 1.151358962059021
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 250 ,loss= 1.0854198932647705
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 260 ,loss= 1.1880165338516235
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 270 ,loss= 1.0905568599700928
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 280 ,loss= 1.2387539148330688
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 290 ,loss= 1.085085391998291
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 300 ,loss= 0.9734845161437988
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 310 ,loss= 1.3397201299667358
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 320 ,loss= 1.2191035747528076
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 330 ,loss= 1.2303119897842407
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 340 ,loss= 1.1283650398254395
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 350 ,loss= 1.1482330560684204
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 360 ,loss= 0.9564087390899658
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 370 ,loss= 1.46341073513031
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 380 ,loss= 1.2754913568496704
+client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 390 ,loss= 0.9107850790023804
+start add noise2021-06-28 17:27:27
+start cal weight time2021-06-28 17:27:27
+end cal weight time2021-06-28 17:27:27
+layer= 0 ratio= 0.1673560079604074
+layer= 1 ratio= 0.16195900914569528
+layer= 2 ratio= 0.038492456205768376
+layer= 3 ratio= 0.04012876018223284
+layer= 4 ratio= 0.0391402980451814
+layer= 5 ratio= 0.04780058581166933
+layer= 6 ratio= 0.03376338886508959
+layer= 7 ratio= 0.042013688790054786
+layer= 8 ratio= 0.03327300860955484
+layer= 9 ratio= 0.041132653787478095
+layer= 10 ratio= 0.1629160888947974
+layer= 11 ratio= 0.024185670129535222
+layer= 12 ratio= 0.07651592160276185
+layer= 13 ratio= 0.03161559207945968
+layer= 14 ratio= 0.031546421938407114
+layer= 15 ratio= 0.02816044795190691
+end_add_noise_time2021-06-28 17:27:31
+start add noise2021-06-28 17:27:31
+start cal weight time2021-06-28 17:27:31
+end cal weight time2021-06-28 17:27:31
+layer= 0 ratio= 0.1671154383931551
+layer= 1 ratio= 0.16208150518461112
+layer= 2 ratio= 0.03830525528593472
+layer= 3 ratio= 0.03958522606433535
+layer= 4 ratio= 0.03908591151814365
+layer= 5 ratio= 0.046671600660252305
+layer= 6 ratio= 0.033763562326677196
+layer= 7 ratio= 0.04187963801239497
+layer= 8 ratio= 0.0332301708419225
+layer= 9 ratio= 0.04217539613766773
+layer= 10 ratio= 0.16271570811537572
+layer= 11 ratio= 0.02399929380043681
+layer= 12 ratio= 0.07641469781212558
+layer= 13 ratio= 0.031992950665285166
+layer= 14 ratio= 0.03161738891174809
+layer= 15 ratio= 0.029366256269933874
+end_add_noise_time2021-06-28 17:27:35
+average train loss= 1.3461806918196666
+2021-06-28 17:27:45,round 2,val Accuracy Top1: 58.420000 %
+2021-06-28 17:27:45,round 2,val Accuracy Top5: 95.500000 %
+******client id  0 ******
+client_update start
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 10 ,loss= 1.3847054243087769
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 20 ,loss= 1.2639720439910889
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 30 ,loss= 1.173717737197876
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 40 ,loss= 1.3823539018630981
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 50 ,loss= 1.324859619140625
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 60 ,loss= 1.0048725605010986
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 70 ,loss= 1.0931915044784546
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 80 ,loss= 0.9709422588348389
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 90 ,loss= 1.093142032623291
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 100 ,loss= 1.2559221982955933
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 110 ,loss= 1.0203063488006592
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 120 ,loss= 1.0754731893539429
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 130 ,loss= 1.09336519241333
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 140 ,loss= 1.037888765335083
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 150 ,loss= 1.2632118463516235
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 160 ,loss= 1.0094101428985596
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 170 ,loss= 0.7743625044822693
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 180 ,loss= 1.191201090812683
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 190 ,loss= 1.206169605255127
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 200 ,loss= 0.7727990746498108
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 210 ,loss= 1.249091386795044
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 220 ,loss= 1.1036269664764404
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 230 ,loss= 1.074365496635437
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 240 ,loss= 0.8992627859115601
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 250 ,loss= 1.1759511232376099
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 260 ,loss= 0.8441790342330933
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 270 ,loss= 1.2597397565841675
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 280 ,loss= 1.1544408798217773
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 290 ,loss= 0.966460645198822
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 300 ,loss= 0.7379336953163147
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 310 ,loss= 0.9575064778327942
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 320 ,loss= 1.0551247596740723
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 330 ,loss= 0.8312826752662659
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 340 ,loss= 0.9420302510261536
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 350 ,loss= 1.0458253622055054
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 360 ,loss= 1.1373209953308105
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 370 ,loss= 0.9639845490455627
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 380 ,loss= 1.074949026107788
+client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 390 ,loss= 0.8015456199645996
+******client id  1 ******
+client_update start
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 10 ,loss= 1.2870244979858398
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 20 ,loss= 1.3766999244689941
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 30 ,loss= 1.2809865474700928
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 40 ,loss= 1.3216642141342163
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 50 ,loss= 1.0123158693313599
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 60 ,loss= 1.1736427545547485
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 70 ,loss= 1.186984658241272
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 80 ,loss= 1.2590073347091675
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 90 ,loss= 1.2367188930511475
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 100 ,loss= 1.001789927482605
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 110 ,loss= 1.4126126766204834
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 120 ,loss= 1.3801831007003784
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 130 ,loss= 1.020582914352417
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 140 ,loss= 1.0546396970748901
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 150 ,loss= 0.831706166267395
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 160 ,loss= 1.459673285484314
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 170 ,loss= 1.0779943466186523
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 180 ,loss= 0.9313717484474182
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 190 ,loss= 0.8696885108947754
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 200 ,loss= 1.0178591012954712
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 210 ,loss= 1.130920648574829
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 220 ,loss= 1.2607699632644653
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 230 ,loss= 1.2120877504348755
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 240 ,loss= 0.9909864664077759
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 250 ,loss= 1.1406145095825195
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 260 ,loss= 0.7883298993110657
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 270 ,loss= 1.0091934204101562
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 280 ,loss= 1.2979105710983276
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 290 ,loss= 0.9728473424911499
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 300 ,loss= 0.9928519129753113
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 310 ,loss= 0.9200182557106018
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 320 ,loss= 1.04512619972229
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 330 ,loss= 0.8118765354156494
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 340 ,loss= 0.8729426860809326
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 350 ,loss= 0.9184144139289856
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 360 ,loss= 0.9348728060722351
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 370 ,loss= 1.2331435680389404
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7337886691093445
+client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 390 ,loss= 1.2138923406600952
+start add noise2021-06-28 17:30:24
+start cal weight time2021-06-28 17:30:24
+end cal weight time2021-06-28 17:30:24
+layer= 0 ratio= 0.14094671443554896
+layer= 1 ratio= 0.13190171710238638
+layer= 2 ratio= 0.033281824026639345
+layer= 3 ratio= 0.034130932457343485
+layer= 4 ratio= 0.03395289632510702
+layer= 5 ratio= 0.04094139462289833
+layer= 6 ratio= 0.030494812923597105
+layer= 7 ratio= 0.03677341816678313
+layer= 8 ratio= 0.029385484378580514
+layer= 9 ratio= 0.03540898710418151
+layer= 10 ratio= 0.24152273412464417
+layer= 11 ratio= 0.02125232325054062
+layer= 12 ratio= 0.10777173437786096
+layer= 13 ratio= 0.027436052277008578
+layer= 14 ratio= 0.02828949497983504
+layer= 15 ratio= 0.02650947944704483
+end_add_noise_time2021-06-28 17:30:28
+start add noise2021-06-28 17:30:28
+start cal weight time2021-06-28 17:30:28
+end cal weight time2021-06-28 17:30:28
+layer= 0 ratio= 0.14080859493012407
+layer= 1 ratio= 0.13257880517656237
+layer= 2 ratio= 0.03308797077930645
+layer= 3 ratio= 0.03409491872045754
+layer= 4 ratio= 0.03385190642950869
+layer= 5 ratio= 0.040565289280772895
+layer= 6 ratio= 0.030375380224813796
+layer= 7 ratio= 0.03580001741068389
+layer= 8 ratio= 0.029402885659703917
+layer= 9 ratio= 0.03603895177371782
+layer= 10 ratio= 0.24138092092857513
+layer= 11 ratio= 0.021671116195620822
+layer= 12 ratio= 0.10769367031708438
+layer= 13 ratio= 0.02716117336677601
+layer= 14 ratio= 0.02822552201027812
+layer= 15 ratio= 0.027262876796014066
+end_add_noise_time2021-06-28 17:30:32
+average train loss= 1.080488164559045
+2021-06-28 17:30:41,round 3,val Accuracy Top1: 68.530000 %
+2021-06-28 17:30:41,round 3,val Accuracy Top5: 97.250000 %
+******client id  0 ******
+client_update start
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 10 ,loss= 1.0334374904632568
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 20 ,loss= 1.2727872133255005
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 30 ,loss= 1.0360060930252075
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 40 ,loss= 0.9816430807113647
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 50 ,loss= 0.8155671954154968
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 60 ,loss= 0.9506946802139282
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 70 ,loss= 0.9551500678062439
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 80 ,loss= 0.9132429361343384
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 90 ,loss= 1.0572502613067627
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 100 ,loss= 0.9298815727233887
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 110 ,loss= 1.0861661434173584
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 120 ,loss= 1.0496315956115723
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 130 ,loss= 1.2505377531051636
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 140 ,loss= 1.202825665473938
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 150 ,loss= 1.2241545915603638
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 160 ,loss= 0.9303023219108582
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 170 ,loss= 0.7831783890724182
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 180 ,loss= 0.7994039058685303
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 190 ,loss= 0.7573211789131165
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 200 ,loss= 0.9832791090011597
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 210 ,loss= 0.8292971849441528
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 220 ,loss= 0.9185157418251038
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 230 ,loss= 1.0723254680633545
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 240 ,loss= 0.9459326863288879
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 250 ,loss= 0.6970579028129578
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 260 ,loss= 0.8541455268859863
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 270 ,loss= 1.0845088958740234
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 280 ,loss= 0.8473693132400513
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 290 ,loss= 0.8449182510375977
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 300 ,loss= 0.9334584474563599
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 310 ,loss= 0.9913099408149719
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 320 ,loss= 0.8087065815925598
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 330 ,loss= 0.9252311587333679
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 340 ,loss= 0.9462062120437622
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 350 ,loss= 0.933716356754303
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 360 ,loss= 0.8322567343711853
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 370 ,loss= 0.8465089201927185
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7743101119995117
+client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 390 ,loss= 0.78615403175354
+******client id  1 ******
+client_update start
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 10 ,loss= 0.8662599325180054
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 20 ,loss= 1.0678482055664062
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 30 ,loss= 1.0187721252441406
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 40 ,loss= 0.9298507571220398
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 50 ,loss= 0.9859769344329834
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 60 ,loss= 0.8146669864654541
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 70 ,loss= 1.1907106637954712
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 80 ,loss= 1.0041626691818237
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 90 ,loss= 1.098536729812622
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 100 ,loss= 0.8739398717880249
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 110 ,loss= 0.7944232821464539
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 120 ,loss= 1.0866279602050781
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 130 ,loss= 0.838320255279541
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 140 ,loss= 0.8897831439971924
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 150 ,loss= 0.9093173742294312
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 160 ,loss= 0.9628099799156189
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 170 ,loss= 1.124131679534912
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 180 ,loss= 0.7607438564300537
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 190 ,loss= 1.0311199426651
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 200 ,loss= 1.0391240119934082
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 210 ,loss= 0.7098852396011353
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 220 ,loss= 0.8474947214126587
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 230 ,loss= 1.0749623775482178
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 240 ,loss= 0.8759928941726685
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 250 ,loss= 0.9371286034584045
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 260 ,loss= 0.9331082105636597
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 270 ,loss= 1.0057191848754883
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 280 ,loss= 0.8263818025588989
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 290 ,loss= 0.9119799137115479
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 300 ,loss= 1.0511595010757446
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 310 ,loss= 0.9496576189994812
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 320 ,loss= 0.5932894349098206
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 330 ,loss= 0.901013195514679
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 340 ,loss= 0.9347129464149475
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 350 ,loss= 0.9668418169021606
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 360 ,loss= 0.895097553730011
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 370 ,loss= 0.8443670272827148
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7801483273506165
+client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 390 ,loss= 0.6888765692710876
+start add noise2021-06-28 17:33:20
+start cal weight time2021-06-28 17:33:20
+end cal weight time2021-06-28 17:33:20
+layer= 0 ratio= 0.12403862045343342
+layer= 1 ratio= 0.11344658494465841
+layer= 2 ratio= 0.02995646345525857
+layer= 3 ratio= 0.030427129063149167
+layer= 4 ratio= 0.03082411980773864
+layer= 5 ratio= 0.035981060658405145
+layer= 6 ratio= 0.028699623557729318
+layer= 7 ratio= 0.03273675181486109
+layer= 8 ratio= 0.027069790582694986
+layer= 9 ratio= 0.03162372215842047
+layer= 10 ratio= 0.28835703047444944
+layer= 11 ratio= 0.01995812003622596
+layer= 12 ratio= 0.13097898096972194
+layer= 13 ratio= 0.024721679507421757
+layer= 14 ratio= 0.02589320548869941
+layer= 15 ratio= 0.02528711702713221
+end_add_noise_time2021-06-28 17:33:26
+start add noise2021-06-28 17:33:26
+start cal weight time2021-06-28 17:33:26
+end cal weight time2021-06-28 17:33:26
+layer= 0 ratio= 0.12405801164100276
+layer= 1 ratio= 0.11374045961847493
+layer= 2 ratio= 0.02988657461931502
+layer= 3 ratio= 0.03048689484784346
+layer= 4 ratio= 0.030747786476632535
+layer= 5 ratio= 0.03643402122973925
+layer= 6 ratio= 0.02867579809876667
+layer= 7 ratio= 0.03247012466016402
+layer= 8 ratio= 0.027058237885841684
+layer= 9 ratio= 0.0314004257138082
+layer= 10 ratio= 0.2885115401085007
+layer= 11 ratio= 0.020023720602316254
+layer= 12 ratio= 0.13104722433096863
+layer= 13 ratio= 0.024458644495344146
+layer= 14 ratio= 0.025916101535046976
+layer= 15 ratio= 0.025084434136234703
+end_add_noise_time2021-06-28 17:33:32
+average train loss= 0.910636140028839
+2021-06-28 17:33:41,round 4,val Accuracy Top1: 72.740000 %
+2021-06-28 17:33:41,round 4,val Accuracy Top5: 97.960000 %
+******client id  0 ******
+client_update start
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 10 ,loss= 0.8882699608802795
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 20 ,loss= 0.5408087372779846
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 30 ,loss= 0.7262796759605408
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 40 ,loss= 0.7980195879936218
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 50 ,loss= 0.6699965000152588
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 60 ,loss= 0.8577675819396973
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 70 ,loss= 0.6709008812904358
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 80 ,loss= 0.9694830179214478
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 90 ,loss= 0.6843189001083374
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 100 ,loss= 0.7425246238708496
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 110 ,loss= 0.6995204091072083
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 120 ,loss= 0.950398325920105
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 130 ,loss= 0.7624680399894714
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 140 ,loss= 1.0004926919937134
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 150 ,loss= 0.7948614954948425
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 160 ,loss= 0.5756231546401978
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 170 ,loss= 0.7641401886940002
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 180 ,loss= 0.8306965827941895
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 190 ,loss= 0.8720089197158813
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 200 ,loss= 0.8386199474334717
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 210 ,loss= 0.6999495029449463
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 220 ,loss= 0.5980631113052368
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 230 ,loss= 0.5344198942184448
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 240 ,loss= 1.0702835321426392
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 250 ,loss= 0.7700623273849487
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 260 ,loss= 0.6968271732330322
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 270 ,loss= 0.7195815443992615
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 280 ,loss= 0.8530527949333191
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 290 ,loss= 0.7283313870429993
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 300 ,loss= 0.8181818723678589
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 310 ,loss= 0.9804069995880127
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 320 ,loss= 0.6186652183532715
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 330 ,loss= 1.0027071237564087
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 340 ,loss= 0.906071126461029
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 350 ,loss= 0.8053556680679321
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 360 ,loss= 0.7881345748901367
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 370 ,loss= 0.8018818497657776
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 380 ,loss= 0.8003209829330444
+client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 390 ,loss= 1.1509617567062378
+******client id  1 ******
+client_update start
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 10 ,loss= 0.9094184041023254
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 20 ,loss= 0.9055023193359375
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 30 ,loss= 0.9071374535560608
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 40 ,loss= 0.6168122887611389
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 50 ,loss= 0.828830361366272
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 60 ,loss= 0.7922934889793396
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 70 ,loss= 0.8772637844085693
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 80 ,loss= 0.6574179530143738
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 90 ,loss= 0.8321701288223267
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 100 ,loss= 0.8839004635810852
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 110 ,loss= 0.8201135993003845
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 120 ,loss= 0.9507262110710144
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 130 ,loss= 0.8770860433578491
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 140 ,loss= 0.825101912021637
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 150 ,loss= 0.829698383808136
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 160 ,loss= 0.8742237091064453
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 170 ,loss= 0.9376275539398193
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 180 ,loss= 0.7422005534172058
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 190 ,loss= 0.9024984836578369
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 200 ,loss= 0.8560516834259033
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 210 ,loss= 0.8949240446090698
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 220 ,loss= 0.6803988218307495
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 230 ,loss= 0.7649731040000916
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 240 ,loss= 0.8695682287216187
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 250 ,loss= 0.7629615664482117
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 260 ,loss= 0.8792500495910645
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 270 ,loss= 0.8303043842315674
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 280 ,loss= 0.7352322936058044
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 290 ,loss= 0.8352311849594116
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 300 ,loss= 0.651980459690094
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 310 ,loss= 0.9179180860519409
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 320 ,loss= 0.7249469757080078
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 330 ,loss= 0.8808051943778992
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 340 ,loss= 0.8704461455345154
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 350 ,loss= 0.689781665802002
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 360 ,loss= 0.7136261463165283
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 370 ,loss= 0.6641230583190918
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7518947720527649
+client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 390 ,loss= 0.5313787460327148
+start add noise2021-06-28 17:36:21
+start cal weight time2021-06-28 17:36:21
+end cal weight time2021-06-28 17:36:21
+layer= 0 ratio= 0.11108786493851987
+layer= 1 ratio= 0.09880068183355196
+layer= 2 ratio= 0.027451606854319178
+layer= 3 ratio= 0.027568523766962706
+layer= 4 ratio= 0.02843619766592723
+layer= 5 ratio= 0.03299172999196804
+layer= 6 ratio= 0.027552558932161294
+layer= 7 ratio= 0.029350101048546087
+layer= 8 ratio= 0.025221496867585146
+layer= 9 ratio= 0.028194505301418153
+layer= 10 ratio= 0.329276545333865
+layer= 11 ratio= 0.018799641751267405
+layer= 12 ratio= 0.14597664391421616
+layer= 13 ratio= 0.02216093984913454
+layer= 14 ratio= 0.023821425965024262
+layer= 15 ratio= 0.023309535985533012
+end_add_noise_time2021-06-28 17:36:27
+start add noise2021-06-28 17:36:27
+start cal weight time2021-06-28 17:36:27
+end cal weight time2021-06-28 17:36:27
+layer= 0 ratio= 0.11112594886946706
+layer= 1 ratio= 0.09896424009106096
+layer= 2 ratio= 0.027452392656045682
+layer= 3 ratio= 0.027475026874000063
+layer= 4 ratio= 0.028437450119266395
+layer= 5 ratio= 0.03290753638504471
+layer= 6 ratio= 0.027354547663420034
+layer= 7 ratio= 0.028921900481569483
+layer= 8 ratio= 0.025143634093642266
+layer= 9 ratio= 0.02822299855964015
+layer= 10 ratio= 0.3293585782985948
+layer= 11 ratio= 0.01901918150562965
+layer= 12 ratio= 0.14600421706560326
+layer= 13 ratio= 0.0223709405684705
+layer= 14 ratio= 0.023840439677974307
+layer= 15 ratio= 0.02340096709057078
+end_add_noise_time2021-06-28 17:36:32
+average train loss= 0.8107798183741777
+2021-06-28 17:36:42,round 5,val Accuracy Top1: 74.580000 %
+2021-06-28 17:36:42,round 5,val Accuracy Top5: 98.030000 %
+******client id  0 ******
+client_update start
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 10 ,loss= 0.7638841271400452
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 20 ,loss= 0.7389283776283264
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 30 ,loss= 0.4728434979915619
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 40 ,loss= 0.6651769876480103
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 50 ,loss= 0.7420554161071777
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 60 ,loss= 0.7970104217529297
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 70 ,loss= 0.8239894509315491
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 80 ,loss= 0.843004047870636
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 90 ,loss= 0.6461796760559082
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 100 ,loss= 0.4645784795284271
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 110 ,loss= 0.7552483677864075
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 120 ,loss= 0.8627385497093201
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 130 ,loss= 0.6879844665527344
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 140 ,loss= 0.8604393005371094
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 150 ,loss= 0.6989320516586304
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 160 ,loss= 0.9796725511550903
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 170 ,loss= 0.9285774230957031
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 180 ,loss= 0.6611414551734924
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 190 ,loss= 0.5603564381599426
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 200 ,loss= 0.6683767437934875
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 210 ,loss= 0.9116869568824768
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 220 ,loss= 0.5751981735229492
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 230 ,loss= 0.7627067565917969
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 240 ,loss= 0.6249545216560364
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 250 ,loss= 0.6160645484924316
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 260 ,loss= 0.5413672924041748
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 270 ,loss= 0.8140238523483276
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 280 ,loss= 0.46836379170417786
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 290 ,loss= 0.636401355266571
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 300 ,loss= 0.820540189743042
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 310 ,loss= 0.6964414119720459
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 320 ,loss= 0.6515824198722839
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 330 ,loss= 0.4985971748828888
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 340 ,loss= 0.6170336008071899
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 350 ,loss= 0.6939226984977722
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 360 ,loss= 0.6354948878288269
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 370 ,loss= 0.48412445187568665
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7318882942199707
+client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 390 ,loss= 0.5704857707023621
+******client id  1 ******
+client_update start
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 10 ,loss= 0.868305504322052
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 20 ,loss= 0.8282941579818726
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 30 ,loss= 0.6448370814323425
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 40 ,loss= 0.7151365280151367
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 50 ,loss= 0.6750916242599487
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 60 ,loss= 0.8027711510658264
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 70 ,loss= 0.874199628829956
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 80 ,loss= 0.7716747522354126
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 90 ,loss= 0.8703251481056213
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 100 ,loss= 0.9395479559898376
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 110 ,loss= 0.5650627017021179
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 120 ,loss= 0.5695140957832336
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 130 ,loss= 0.7051526308059692
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 140 ,loss= 1.0069165229797363
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 150 ,loss= 0.9664585590362549
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 160 ,loss= 0.811991274356842
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 170 ,loss= 0.6174313426017761
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 180 ,loss= 0.7955722808837891
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 190 ,loss= 0.6720921993255615
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 200 ,loss= 0.6292906403541565
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 210 ,loss= 0.7116502523422241
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 220 ,loss= 0.8123000860214233
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 230 ,loss= 0.8635318875312805
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 240 ,loss= 0.8811724781990051
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 250 ,loss= 0.6336774230003357
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 260 ,loss= 1.0037388801574707
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 270 ,loss= 0.8492528200149536
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 280 ,loss= 0.7621771693229675
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 290 ,loss= 0.8204874992370605
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 300 ,loss= 0.9225698113441467
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 310 ,loss= 0.8889285326004028
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 320 ,loss= 0.7889617681503296
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 330 ,loss= 0.9057771563529968
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 340 ,loss= 0.9082114100456238
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 350 ,loss= 0.6792137622833252
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 360 ,loss= 0.7386531233787537
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 370 ,loss= 0.5984792113304138
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 380 ,loss= 1.0126053094863892
+client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 390 ,loss= 0.928489089012146
+start add noise2021-06-28 17:39:17
+start cal weight time2021-06-28 17:39:17
+end cal weight time2021-06-28 17:39:17
+layer= 0 ratio= 0.1007436511393179
+layer= 1 ratio= 0.08714151614803785
+layer= 2 ratio= 0.025540926445325313
+layer= 3 ratio= 0.025160411425115332
+layer= 4 ratio= 0.026688631763295896
+layer= 5 ratio= 0.03009728979573377
+layer= 6 ratio= 0.026570872631596253
+layer= 7 ratio= 0.026618350314305077
+layer= 8 ratio= 0.023837557703805624
+layer= 9 ratio= 0.02496377160104007
+layer= 10 ratio= 0.35931093727084545
+layer= 11 ratio= 0.01811691168843297
+layer= 12 ratio= 0.16128191740607356
+layer= 13 ratio= 0.020526391374055535
+layer= 14 ratio= 0.02201177596626001
+layer= 15 ratio= 0.021389087326759336
+end_add_noise_time2021-06-28 17:39:21
+start add noise2021-06-28 17:39:21
+start cal weight time2021-06-28 17:39:21
+end cal weight time2021-06-28 17:39:21
+layer= 0 ratio= 0.10064682506967783
+layer= 1 ratio= 0.08732080985867723
+layer= 2 ratio= 0.02550614718567829
+layer= 3 ratio= 0.025106769876984618
+layer= 4 ratio= 0.02666540034157186
+layer= 5 ratio= 0.029997588259723245
+layer= 6 ratio= 0.026588551250556793
+layer= 7 ratio= 0.026908508616536438
+layer= 8 ratio= 0.02377427735686812
+layer= 9 ratio= 0.024789333104914404
+layer= 10 ratio= 0.3591165848158638
+layer= 11 ratio= 0.018191202714468425
+layer= 12 ratio= 0.16119128806630995
+layer= 13 ratio= 0.020447129860877617
+layer= 14 ratio= 0.02198469055689146
+layer= 15 ratio= 0.021764893064399906
+end_add_noise_time2021-06-28 17:39:26
+average train loss= 0.747315088615698
+2021-06-28 17:39:35,round 6,val Accuracy Top1: 76.470000 %
+2021-06-28 17:39:35,round 6,val Accuracy Top5: 98.490000 %
+******client id  0 ******
+client_update start
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 10 ,loss= 0.8064553141593933
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 20 ,loss= 0.7282208204269409
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 30 ,loss= 0.9067821502685547
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 40 ,loss= 0.7746201157569885
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 50 ,loss= 0.6246546506881714
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 60 ,loss= 0.7919068932533264
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 70 ,loss= 0.5235942602157593
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 80 ,loss= 0.6070968508720398
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 90 ,loss= 0.7277435064315796
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 100 ,loss= 0.9059716463088989
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 110 ,loss= 0.9071888327598572
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 120 ,loss= 0.7495073080062866
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 130 ,loss= 0.6173192858695984
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 140 ,loss= 0.5794588923454285
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 150 ,loss= 0.7319527864456177
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 160 ,loss= 0.7341701984405518
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 170 ,loss= 0.712852954864502
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 180 ,loss= 0.8403624892234802
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 190 ,loss= 0.5178993344306946
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 200 ,loss= 0.7279680967330933
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 210 ,loss= 0.9397690892219543
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 220 ,loss= 0.6846617460250854
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 230 ,loss= 0.6599144339561462
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 240 ,loss= 0.6405874490737915
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 250 ,loss= 0.600092351436615
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 260 ,loss= 0.8952049016952515
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 270 ,loss= 0.7266051173210144
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 280 ,loss= 0.6246631145477295
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 290 ,loss= 0.7301462292671204
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 300 ,loss= 0.673007607460022
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 310 ,loss= 0.6886563897132874
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 320 ,loss= 0.840300440788269
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 330 ,loss= 0.6388177871704102
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 340 ,loss= 0.4319574236869812
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 350 ,loss= 0.6719689965248108
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 360 ,loss= 0.8035708069801331
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 370 ,loss= 0.5088395476341248
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 380 ,loss= 0.8866431713104248
+client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 390 ,loss= 0.6961323618888855
+******client id  1 ******
+client_update start
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 10 ,loss= 0.8412882685661316
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 20 ,loss= 0.8650637865066528
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 30 ,loss= 0.5979336500167847
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 40 ,loss= 0.6779868006706238
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 50 ,loss= 0.7594443559646606
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 60 ,loss= 0.6666979789733887
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 70 ,loss= 0.7912300229072571
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 80 ,loss= 0.633832573890686
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 90 ,loss= 0.6223890781402588
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 100 ,loss= 1.0155807733535767
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 110 ,loss= 1.0080574750900269
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 120 ,loss= 0.5295575857162476
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 130 ,loss= 0.8990699648857117
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 140 ,loss= 0.6220107078552246
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 150 ,loss= 0.8567934036254883
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 160 ,loss= 0.8762305974960327
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 170 ,loss= 0.9725927710533142
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 180 ,loss= 0.738014280796051
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 190 ,loss= 0.6956155300140381
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 200 ,loss= 0.7176612019538879
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 210 ,loss= 0.6521965861320496
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 220 ,loss= 0.6462820768356323
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 230 ,loss= 0.7531307935714722
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 240 ,loss= 0.45402538776397705
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 250 ,loss= 0.6664396524429321
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 260 ,loss= 0.790402889251709
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 270 ,loss= 0.7908773422241211
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 280 ,loss= 0.9840087890625
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 290 ,loss= 0.6447490453720093
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 300 ,loss= 0.8531630635261536
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 310 ,loss= 0.5876606106758118
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 320 ,loss= 0.6560654044151306
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 330 ,loss= 0.8282333016395569
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 340 ,loss= 0.9951885938644409
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 350 ,loss= 0.6503993272781372
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 360 ,loss= 0.745144248008728
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 370 ,loss= 0.6013413667678833
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7435717582702637
+client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 390 ,loss= 0.9201448559761047
+start add noise2021-06-28 17:42:01
+start cal weight time2021-06-28 17:42:01
+end cal weight time2021-06-28 17:42:01
+layer= 0 ratio= 0.09190798868974463
+layer= 1 ratio= 0.07775413552405297
+layer= 2 ratio= 0.02397711123324199
+layer= 3 ratio= 0.02307786296501796
+layer= 4 ratio= 0.025276491559418957
+layer= 5 ratio= 0.02769323916790226
+layer= 6 ratio= 0.02585607667007541
+layer= 7 ratio= 0.024582410259170226
+layer= 8 ratio= 0.02263289112340152
+layer= 9 ratio= 0.02221371641647596
+layer= 10 ratio= 0.38476126736908317
+layer= 11 ratio= 0.017325340286797653
+layer= 12 ratio= 0.1732614103571929
+layer= 13 ratio= 0.019068288466704154
+layer= 14 ratio= 0.02039249441134533
+layer= 15 ratio= 0.020219275500375104
+end_add_noise_time2021-06-28 17:42:05
+start add noise2021-06-28 17:42:05
+start cal weight time2021-06-28 17:42:05
+end cal weight time2021-06-28 17:42:05
+layer= 0 ratio= 0.09191253132622859
+layer= 1 ratio= 0.07810047973095409
+layer= 2 ratio= 0.023926094031775338
+layer= 3 ratio= 0.022971830253460487
+layer= 4 ratio= 0.025242788426024204
+layer= 5 ratio= 0.027589688553943795
+layer= 6 ratio= 0.02580565991942758
+layer= 7 ratio= 0.02437647465317105
+layer= 8 ratio= 0.022586979321041353
+layer= 9 ratio= 0.0220503919400505
+layer= 10 ratio= 0.38482613575091484
+layer= 11 ratio= 0.01755446271659193
+layer= 12 ratio= 0.17329238255389595
+layer= 13 ratio= 0.0190057996879518
+layer= 14 ratio= 0.020422571638364882
+layer= 15 ratio= 0.02033572949620365
+end_add_noise_time2021-06-28 17:42:08
+average train loss= 0.6996881410746318
+2021-06-28 17:42:17,round 7,val Accuracy Top1: 76.960000 %
+2021-06-28 17:42:17,round 7,val Accuracy Top5: 98.390000 %
+******client id  0 ******
+client_update start
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 10 ,loss= 0.5094574689865112
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 20 ,loss= 0.722305417060852
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 30 ,loss= 0.8059179782867432
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 40 ,loss= 0.6760812997817993
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 50 ,loss= 0.6793655157089233
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 60 ,loss= 0.9582450985908508
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 70 ,loss= 0.502426266670227
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 80 ,loss= 0.45472338795661926
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 90 ,loss= 0.6835589408874512
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 100 ,loss= 0.5496594905853271
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 110 ,loss= 0.5323699116706848
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 120 ,loss= 0.736826479434967
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 130 ,loss= 0.6986055970191956
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 140 ,loss= 0.6141398549079895
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 150 ,loss= 0.7347666025161743
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 160 ,loss= 0.7259253263473511
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 170 ,loss= 0.4371888041496277
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 180 ,loss= 0.8056994080543518
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 190 ,loss= 0.7010266780853271
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 200 ,loss= 0.7031919360160828
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 210 ,loss= 0.7469591498374939
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 220 ,loss= 0.6596741080284119
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 230 ,loss= 0.9295738935470581
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 240 ,loss= 0.48914071917533875
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 250 ,loss= 0.7251740097999573
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 260 ,loss= 0.9420947432518005
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 270 ,loss= 0.571245551109314
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 280 ,loss= 0.43813082575798035
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 290 ,loss= 0.92364901304245
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 300 ,loss= 0.5309911370277405
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 310 ,loss= 0.5970780849456787
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 320 ,loss= 0.6429985761642456
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 330 ,loss= 0.6115968823432922
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 340 ,loss= 0.8048127889633179
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 350 ,loss= 0.7346347570419312
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 360 ,loss= 0.6638970375061035
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 370 ,loss= 0.7694845199584961
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7217341065406799
+client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 390 ,loss= 0.6865600943565369
+******client id  1 ******
+client_update start
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 10 ,loss= 0.6005505323410034
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 20 ,loss= 0.7559673190116882
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 30 ,loss= 0.7434725761413574
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 40 ,loss= 0.639155387878418
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 50 ,loss= 0.6111548542976379
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 60 ,loss= 0.6509163975715637
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 70 ,loss= 0.5088027119636536
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 80 ,loss= 0.6029626727104187
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 90 ,loss= 0.9908023476600647
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 100 ,loss= 0.7169064283370972
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 110 ,loss= 0.45449280738830566
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 120 ,loss= 0.43327614665031433
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 130 ,loss= 0.46742501854896545
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 140 ,loss= 0.6415013670921326
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 150 ,loss= 0.7183967232704163
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 160 ,loss= 0.6799058318138123
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 170 ,loss= 0.8389831185340881
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 180 ,loss= 1.080897569656372
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 190 ,loss= 0.6778730154037476
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 200 ,loss= 0.8090539574623108
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 210 ,loss= 0.9513517022132874
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 220 ,loss= 0.6195817589759827
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 230 ,loss= 0.5881257057189941
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 240 ,loss= 0.7316955924034119
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 250 ,loss= 1.007501482963562
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 260 ,loss= 0.6883319616317749
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 270 ,loss= 0.5982115864753723
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 280 ,loss= 0.6477954387664795
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 290 ,loss= 0.6467207670211792
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 300 ,loss= 0.5391747355461121
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 310 ,loss= 0.7403770089149475
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 320 ,loss= 0.5591297149658203
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 330 ,loss= 0.6757294535636902
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 340 ,loss= 0.866279125213623
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 350 ,loss= 0.6236913800239563
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 360 ,loss= 0.6411906480789185
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 370 ,loss= 0.5031566619873047
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7702878713607788
+client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 390 ,loss= 0.5098341703414917
+start add noise2021-06-28 17:44:43
+start cal weight time2021-06-28 17:44:43
+end cal weight time2021-06-28 17:44:43
+layer= 0 ratio= 0.0836968314187223
+layer= 1 ratio= 0.06991207009534497
+layer= 2 ratio= 0.022489452692116867
+layer= 3 ratio= 0.021289844143909546
+layer= 4 ratio= 0.02388793506953022
+layer= 5 ratio= 0.025785762535134062
+layer= 6 ratio= 0.025223046966104227
+layer= 7 ratio= 0.022107442093117834
+layer= 8 ratio= 0.021484365207915853
+layer= 9 ratio= 0.019771080765571398
+layer= 10 ratio= 0.4094058372177372
+layer= 11 ratio= 0.017192540374340412
+layer= 12 ratio= 0.18206023569746796
+layer= 13 ratio= 0.017774750612689807
+layer= 14 ratio= 0.01878251821669148
+layer= 15 ratio= 0.019136286893605785
+end_add_noise_time2021-06-28 17:44:47
+start add noise2021-06-28 17:44:47
+start cal weight time2021-06-28 17:44:47
+end cal weight time2021-06-28 17:44:47
+layer= 0 ratio= 0.08375846847810059
+layer= 1 ratio= 0.06986386000853419
+layer= 2 ratio= 0.022539333913545827
+layer= 3 ratio= 0.0214076408973237
+layer= 4 ratio= 0.023954450591541526
+layer= 5 ratio= 0.025390060048418026
+layer= 6 ratio= 0.02522961114137561
+layer= 7 ratio= 0.022114750571683727
+layer= 8 ratio= 0.02150209597770036
+layer= 9 ratio= 0.01935792811641043
+layer= 10 ratio= 0.4097671713913945
+layer= 11 ratio= 0.017020397115575358
+layer= 12 ratio= 0.18221900367483937
+layer= 13 ratio= 0.017781788987132487
+layer= 14 ratio= 0.01877062350066622
+layer= 15 ratio= 0.01932281558575813
+end_add_noise_time2021-06-28 17:44:50
+average train loss= 0.6779497311548199
+2021-06-28 17:44:59,round 8,val Accuracy Top1: 77.870000 %
+2021-06-28 17:44:59,round 8,val Accuracy Top5: 98.290000 %
+******client id  0 ******
+client_update start
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 10 ,loss= 0.6550877690315247
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 20 ,loss= 0.5900084376335144
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 30 ,loss= 0.7376656532287598
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 40 ,loss= 0.656772792339325
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 50 ,loss= 0.5618438124656677
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 60 ,loss= 0.7468674182891846
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 70 ,loss= 0.7691187858581543
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 80 ,loss= 0.704976499080658
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 90 ,loss= 0.5835381150245667
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 100 ,loss= 0.6997583508491516
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 110 ,loss= 0.7783737778663635
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 120 ,loss= 0.6945311427116394
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 130 ,loss= 0.45688608288764954
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 140 ,loss= 0.6943697333335876
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 150 ,loss= 0.7136058807373047
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 160 ,loss= 0.581770658493042
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 170 ,loss= 0.7996188402175903
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 180 ,loss= 0.7349358201026917
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 190 ,loss= 0.8521879315376282
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 200 ,loss= 0.5692601799964905
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 210 ,loss= 0.8026930093765259
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 220 ,loss= 0.709712564945221
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 230 ,loss= 0.6698554754257202
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 240 ,loss= 0.7603890299797058
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 250 ,loss= 0.6697832942008972
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 260 ,loss= 0.7930786609649658
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 270 ,loss= 0.5130013823509216
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 280 ,loss= 0.5418384075164795
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 290 ,loss= 0.8175671100616455
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 300 ,loss= 0.685691773891449
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 310 ,loss= 0.5999463200569153
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 320 ,loss= 0.5342000126838684
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 330 ,loss= 0.5524529218673706
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 340 ,loss= 0.7948043942451477
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 350 ,loss= 0.7075183391571045
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 360 ,loss= 0.4570925235748291
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 370 ,loss= 0.8850548267364502
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 380 ,loss= 0.4526784420013428
+client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 390 ,loss= 0.8716979622840881
+******client id  1 ******
+client_update start
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 10 ,loss= 0.6699313521385193
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 20 ,loss= 0.6550855040550232
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 30 ,loss= 0.6089376211166382
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 40 ,loss= 0.458219438791275
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 50 ,loss= 0.8204841613769531
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 60 ,loss= 0.8254028558731079
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 70 ,loss= 0.6546168923377991
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 80 ,loss= 0.5746573209762573
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 90 ,loss= 0.5743534564971924
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 100 ,loss= 0.5907876491546631
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 110 ,loss= 0.6601118445396423
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 120 ,loss= 0.6155439615249634
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 130 ,loss= 0.7024146318435669
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 140 ,loss= 0.6524104475975037
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 150 ,loss= 0.661291778087616
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 160 ,loss= 0.6292521357536316
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 170 ,loss= 0.7419703602790833
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 180 ,loss= 0.6595497727394104
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 190 ,loss= 0.7564513683319092
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 200 ,loss= 0.7989479899406433
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 210 ,loss= 0.6710621118545532
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 220 ,loss= 0.8069081902503967
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 230 ,loss= 0.6594886183738708
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 240 ,loss= 0.5716514587402344
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 250 ,loss= 0.4150239825248718
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 260 ,loss= 0.629370927810669
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 270 ,loss= 0.6259462237358093
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 280 ,loss= 0.6249873042106628
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 290 ,loss= 0.7574892640113831
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 300 ,loss= 0.5706679821014404
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 310 ,loss= 0.7908113598823547
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 320 ,loss= 0.517350435256958
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 330 ,loss= 0.7816698551177979
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 340 ,loss= 0.8307149410247803
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 350 ,loss= 0.525164783000946
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 360 ,loss= 0.6754450798034668
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 370 ,loss= 0.7670514583587646
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 380 ,loss= 0.46037599444389343
+client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 390 ,loss= 0.6843454837799072
+start add noise2021-06-28 17:47:25
+start cal weight time2021-06-28 17:47:25
+end cal weight time2021-06-28 17:47:25
+layer= 0 ratio= 0.07671913495234739
+layer= 1 ratio= 0.06291339262490508
+layer= 2 ratio= 0.02124267220439709
+layer= 3 ratio= 0.019755272030293796
+layer= 4 ratio= 0.022737277388565156
+layer= 5 ratio= 0.023851805732020427
+layer= 6 ratio= 0.024671781079297538
+layer= 7 ratio= 0.02056331063383932
+layer= 8 ratio= 0.02052119088034341
+layer= 9 ratio= 0.017360542025802297
+layer= 10 ratio= 0.43031299327053174
+layer= 11 ratio= 0.01674800396857975
+layer= 12 ratio= 0.1906393484438646
+layer= 13 ratio= 0.01662538226033964
+layer= 14 ratio= 0.017328103836311025
+layer= 15 ratio= 0.018009788668561743
+end_add_noise_time2021-06-28 17:47:28
+start add noise2021-06-28 17:47:28
+start cal weight time2021-06-28 17:47:28
+end cal weight time2021-06-28 17:47:28
+layer= 0 ratio= 0.07674096492006825
+layer= 1 ratio= 0.06317400752795176
+layer= 2 ratio= 0.021250250786369988
+layer= 3 ratio= 0.019815414837311765
+layer= 4 ratio= 0.022725376273176837
+layer= 5 ratio= 0.02353972148665446
+layer= 6 ratio= 0.024651743802052522
+layer= 7 ratio= 0.02034535054356229
+layer= 8 ratio= 0.020533858128735653
+layer= 9 ratio= 0.017207384740276884
+layer= 10 ratio= 0.43032987135247325
+layer= 11 ratio= 0.016843738402816704
+layer= 12 ratio= 0.19064373217992073
+layer= 13 ratio= 0.016697646135259012
+layer= 14 ratio= 0.01734220156730659
+layer= 15 ratio= 0.01815873731606318
+end_add_noise_time2021-06-28 17:47:32
+average train loss= 0.6502790029548928
+2021-06-28 17:47:41,round 9,val Accuracy Top1: 78.510000 %
+2021-06-28 17:47:41,round 9,val Accuracy Top5: 98.700000 %
+******client id  0 ******
+client_update start
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 10 ,loss= 0.49160775542259216
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 20 ,loss= 0.5486800074577332
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 30 ,loss= 0.45371001958847046
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 40 ,loss= 0.5180964469909668
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 50 ,loss= 0.66273033618927
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 60 ,loss= 0.5919528603553772
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 70 ,loss= 0.5068380236625671
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 80 ,loss= 0.6914373636245728
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 90 ,loss= 0.6366872787475586
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 100 ,loss= 0.680546224117279
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 110 ,loss= 0.8166242837905884
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 120 ,loss= 0.5258345007896423
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 130 ,loss= 0.5938926935195923
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 140 ,loss= 0.41011062264442444
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 150 ,loss= 0.7067767977714539
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 160 ,loss= 0.7658023834228516
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 170 ,loss= 0.6406312584877014
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 180 ,loss= 0.6599777340888977
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 190 ,loss= 0.6802846193313599
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 200 ,loss= 0.3720000982284546
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 210 ,loss= 0.6792328357696533
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 220 ,loss= 0.5984618663787842
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 230 ,loss= 0.5813001394271851
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 240 ,loss= 0.5156490802764893
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 250 ,loss= 0.4762202203273773
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 260 ,loss= 0.8145582675933838
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 270 ,loss= 0.6312862038612366
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 280 ,loss= 0.5510382652282715
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 290 ,loss= 0.565304696559906
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 300 ,loss= 0.8512999415397644
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 310 ,loss= 0.7675169110298157
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 320 ,loss= 0.8475630283355713
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 330 ,loss= 0.42639029026031494
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 340 ,loss= 0.6121717691421509
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 350 ,loss= 0.5923337936401367
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 360 ,loss= 0.5475368499755859
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 370 ,loss= 0.7368122935295105
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 380 ,loss= 0.4933985471725464
+client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 390 ,loss= 0.3700064420700073
+******client id  1 ******
+client_update start
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 10 ,loss= 0.5924045443534851
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 20 ,loss= 0.7389230728149414
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 30 ,loss= 0.6941947937011719
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 40 ,loss= 0.6795198321342468
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 50 ,loss= 0.6694356799125671
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 60 ,loss= 0.5074170231819153
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 70 ,loss= 0.553272008895874
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 80 ,loss= 0.755563497543335
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 90 ,loss= 0.5248425602912903
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 100 ,loss= 0.6321080923080444
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 110 ,loss= 0.8004822731018066
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 120 ,loss= 0.5195980668067932
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 130 ,loss= 0.4811978042125702
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 140 ,loss= 0.5128234624862671
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 150 ,loss= 0.6827507019042969
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 160 ,loss= 0.8301998972892761
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 170 ,loss= 0.6092093586921692
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 180 ,loss= 0.40245744585990906
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 190 ,loss= 0.5599278211593628
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 200 ,loss= 0.6320398449897766
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 210 ,loss= 0.5496765375137329
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 220 ,loss= 0.6682522892951965
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 230 ,loss= 0.5249828696250916
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 240 ,loss= 0.6454029679298401
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 250 ,loss= 0.9549029469490051
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 260 ,loss= 0.6824883222579956
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 270 ,loss= 0.6704933643341064
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 280 ,loss= 0.4588994085788727
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 290 ,loss= 0.672853410243988
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 300 ,loss= 0.628029465675354
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 310 ,loss= 0.5767759084701538
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 320 ,loss= 0.857266366481781
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 330 ,loss= 0.8374875783920288
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 340 ,loss= 0.7503061890602112
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 350 ,loss= 0.5324735641479492
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 360 ,loss= 0.37790390849113464
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 370 ,loss= 0.4923762083053589
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 380 ,loss= 0.6135438680648804
+client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 390 ,loss= 0.5829138159751892
+start add noise2021-06-28 17:50:06
+start cal weight time2021-06-28 17:50:06
+end cal weight time2021-06-28 17:50:06
+layer= 0 ratio= 0.07085252465932809
+layer= 1 ratio= 0.057542572323969796
+layer= 2 ratio= 0.02018784153800337
+layer= 3 ratio= 0.01849793494908247
+layer= 4 ratio= 0.021810242529285068
+layer= 5 ratio= 0.02212802471197211
+layer= 6 ratio= 0.02432356222376194
+layer= 7 ratio= 0.018911966927714546
+layer= 8 ratio= 0.019852892396836387
+layer= 9 ratio= 0.015345654222024498
+layer= 10 ratio= 0.4471771707636578
+layer= 11 ratio= 0.016381812652438387
+layer= 12 ratio= 0.19755748803331863
+layer= 13 ratio= 0.01589561179145545
+layer= 14 ratio= 0.016089335704923255
+layer= 15 ratio= 0.01744536457222822
+end_add_noise_time2021-06-28 17:50:10
+start add noise2021-06-28 17:50:10
+start cal weight time2021-06-28 17:50:10
+end cal weight time2021-06-28 17:50:10
+layer= 0 ratio= 0.07090492064344087
+layer= 1 ratio= 0.05737694083603617
+layer= 2 ratio= 0.02019557255112017
+layer= 3 ratio= 0.01838313079163806
+layer= 4 ratio= 0.02184393195538175
+layer= 5 ratio= 0.0220521552973609
+layer= 6 ratio= 0.024361304348598362
+layer= 7 ratio= 0.018592793420064098
+layer= 8 ratio= 0.01982691186645467
+layer= 9 ratio= 0.015328454202739324
+layer= 10 ratio= 0.44745858220020285
+layer= 11 ratio= 0.016650513262191746
+layer= 12 ratio= 0.19767836970619557
+layer= 13 ratio= 0.01583160351633527
+layer= 14 ratio= 0.01609198618085763
+layer= 15 ratio= 0.01742282922138246
+end_add_noise_time2021-06-28 17:50:13
+average train loss= 0.6281423295855217
+2021-06-28 17:50:22,round 10,val Accuracy Top1: 78.110000 %
+2021-06-28 17:50:22,round 10,val Accuracy Top5: 98.690000 %

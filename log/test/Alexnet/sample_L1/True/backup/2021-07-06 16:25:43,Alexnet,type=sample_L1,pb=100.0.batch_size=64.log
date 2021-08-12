@@ -1,0 +1,991 @@
+type sample_L1
+pb 100.0
+clip_bound 20.0
+log_path log/test/Alexnet/sample_L1/True/0
+train_data data
+test_data data
+batch_size 64
+test_batch_size 64
+lr 0.0002
+momentum 0.5
+no_cuda False
+seed 1
+log_interval 1
+privacy_delta 1e-06
+sample_num 500
+islog True
+is_ratio_list True
+num_clients 2
+num_rounds 10
+epochs 1
+ratio_type 0
+test_layer 0
+按照权重分配eps
+权重越大,eps越大,噪声越小
+device cuda
+loading data
+load data done
+AlexNet(
+  (conv1): Sequential(
+    (0): Conv2d(3, 96, kernel_size=(6, 6), stride=(1, 1))
+    (1): ReLU()
+  )
+  (conv2): Sequential(
+    (0): Conv2d(96, 256, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv3): Sequential(
+    (0): Conv2d(256, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+  )
+  (conv4): Sequential(
+    (0): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+  )
+  (conv5): Sequential(
+    (0): Conv2d(384, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=3, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (dense): Sequential(
+    (0): Linear(in_features=9216, out_features=4096, bias=True)
+    (1): ReLU()
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=4096, out_features=4096, bias=True)
+    (4): ReLU()
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=4096, out_features=10, bias=True)
+  )
+)
+********start training********
+start_round_time 2021-07-06 16:25:46
+******client id  0 ******
+client_update start
+2021-07-06 16:25:48  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 10 ,loss= 2.2885844707489014
+2021-07-06 16:25:50  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 20 ,loss= 2.192429304122925
+2021-07-06 16:25:52  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 30 ,loss= 1.9945118427276611
+2021-07-06 16:25:54  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 40 ,loss= 2.1930553913116455
+2021-07-06 16:25:56  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 50 ,loss= 2.068399667739868
+2021-07-06 16:25:58  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 60 ,loss= 2.187187910079956
+2021-07-06 16:26:00  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 70 ,loss= 2.02435564994812
+2021-07-06 16:26:02  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 80 ,loss= 2.008906126022339
+2021-07-06 16:26:04  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 90 ,loss= 1.8297288417816162
+2021-07-06 16:26:06  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 100 ,loss= 1.792931318283081
+2021-07-06 16:26:08  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 110 ,loss= 1.768964171409607
+2021-07-06 16:26:10  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 120 ,loss= 1.932973027229309
+2021-07-06 16:26:12  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 130 ,loss= 1.8158423900604248
+2021-07-06 16:26:14  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 140 ,loss= 1.9368840456008911
+2021-07-06 16:26:17  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 150 ,loss= 1.730584740638733
+2021-07-06 16:26:19  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 160 ,loss= 1.7752999067306519
+2021-07-06 16:26:21  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 170 ,loss= 1.752190351486206
+2021-07-06 16:26:23  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 180 ,loss= 1.729225754737854
+2021-07-06 16:26:25  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 190 ,loss= 1.5480437278747559
+2021-07-06 16:26:27  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 200 ,loss= 1.6774648427963257
+2021-07-06 16:26:29  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 210 ,loss= 1.5888489484786987
+2021-07-06 16:26:31  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 220 ,loss= 1.509427547454834
+2021-07-06 16:26:33  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 230 ,loss= 1.583415150642395
+2021-07-06 16:26:35  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 240 ,loss= 1.580458164215088
+2021-07-06 16:26:37  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 250 ,loss= 1.5686163902282715
+2021-07-06 16:26:39  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 260 ,loss= 1.5482174158096313
+2021-07-06 16:26:41  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 270 ,loss= 1.4983742237091064
+2021-07-06 16:26:43  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 280 ,loss= 1.626399278640747
+2021-07-06 16:26:45  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 290 ,loss= 1.4905705451965332
+2021-07-06 16:26:47  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 300 ,loss= 1.538255214691162
+2021-07-06 16:26:49  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 310 ,loss= 1.3459231853485107
+2021-07-06 16:26:52  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 320 ,loss= 1.4664233922958374
+2021-07-06 16:26:54  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 330 ,loss= 1.4073646068572998
+2021-07-06 16:26:56  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 340 ,loss= 1.4987998008728027
+2021-07-06 16:26:58  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 350 ,loss= 1.4305304288864136
+2021-07-06 16:27:00  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 360 ,loss= 1.5441447496414185
+2021-07-06 16:27:02  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 370 ,loss= 1.3402734994888306
+2021-07-06 16:27:04  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 380 ,loss= 1.30198073387146
+2021-07-06 16:27:06  client id= 0 ,round= 1 ,epoch= 1 ,client update iteration= 390 ,loss= 1.440226674079895
+******client id  1 ******
+client_update start
+2021-07-06 16:27:08  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 10 ,loss= 2.2632651329040527
+2021-07-06 16:27:10  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 20 ,loss= 2.150465488433838
+2021-07-06 16:27:12  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 30 ,loss= 2.171807050704956
+2021-07-06 16:27:14  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 40 ,loss= 2.0864219665527344
+2021-07-06 16:27:16  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 50 ,loss= 2.0654492378234863
+2021-07-06 16:27:18  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 60 ,loss= 1.884121298789978
+2021-07-06 16:27:20  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 70 ,loss= 1.6731914281845093
+2021-07-06 16:27:23  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 80 ,loss= 1.8605155944824219
+2021-07-06 16:27:25  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 90 ,loss= 1.7757033109664917
+2021-07-06 16:27:27  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 100 ,loss= 1.7845686674118042
+2021-07-06 16:27:29  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 110 ,loss= 1.6594951152801514
+2021-07-06 16:27:31  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 120 ,loss= 1.7639378309249878
+2021-07-06 16:27:33  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 130 ,loss= 1.8547942638397217
+2021-07-06 16:27:35  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 140 ,loss= 1.8528021574020386
+2021-07-06 16:27:37  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 150 ,loss= 1.960341215133667
+2021-07-06 16:27:39  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 160 ,loss= 1.7186164855957031
+2021-07-06 16:27:41  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 170 ,loss= 1.710244059562683
+2021-07-06 16:27:43  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 180 ,loss= 1.6187907457351685
+2021-07-06 16:27:45  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 190 ,loss= 1.696994662284851
+2021-07-06 16:27:47  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 200 ,loss= 1.6347719430923462
+2021-07-06 16:27:49  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 210 ,loss= 1.6485093832015991
+2021-07-06 16:27:51  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 220 ,loss= 1.5126045942306519
+2021-07-06 16:27:53  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 230 ,loss= 1.7656826972961426
+2021-07-06 16:27:55  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 240 ,loss= 1.4479479789733887
+2021-07-06 16:27:58  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 250 ,loss= 1.5345104932785034
+2021-07-06 16:28:00  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 260 ,loss= 1.4701223373413086
+2021-07-06 16:28:02  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 270 ,loss= 1.4941622018814087
+2021-07-06 16:28:04  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 280 ,loss= 1.4623939990997314
+2021-07-06 16:28:06  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 290 ,loss= 1.5654233694076538
+2021-07-06 16:28:08  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 300 ,loss= 1.575452446937561
+2021-07-06 16:28:10  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 310 ,loss= 1.4810619354248047
+2021-07-06 16:28:12  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 320 ,loss= 1.3971118927001953
+2021-07-06 16:28:14  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 330 ,loss= 1.348850965499878
+2021-07-06 16:28:16  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 340 ,loss= 1.5281540155410767
+2021-07-06 16:28:18  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 350 ,loss= 1.4865401983261108
+2021-07-06 16:28:20  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 360 ,loss= 1.5881414413452148
+2021-07-06 16:28:22  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 370 ,loss= 1.3823649883270264
+2021-07-06 16:28:24  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 380 ,loss= 1.3792976140975952
+2021-07-06 16:28:26  client id= 1 ,round= 1 ,epoch= 1 ,client update iteration= 390 ,loss= 1.5400632619857788
+end_round_time 2021-07-06 16:28:27
+start add noise 2021-07-06 16:28:27
+***************************add noise test***************************
+test layer= 0
+***************************add noise test***************************
+test layer= 0
+end add noise time 2021-07-06 16:28:27
+average train loss= 1.7108358106649746
+2021-07-06 16:28:36,round 1,val Accuracy Top1: 17.820000 %
+2021-07-06 16:28:36,round 1,val Accuracy Top5: 61.340000 %
+start_round_time 2021-07-06 16:28:36
+******client id  0 ******
+client_update start
+2021-07-06 16:28:38  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 10 ,loss= 1.9428025484085083
+2021-07-06 16:28:40  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 20 ,loss= 1.8810786008834839
+2021-07-06 16:28:42  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 30 ,loss= 1.8189061880111694
+2021-07-06 16:28:45  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 40 ,loss= 1.753272294998169
+2021-07-06 16:28:47  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 50 ,loss= 1.8578017950057983
+2021-07-06 16:28:49  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 60 ,loss= 1.5351265668869019
+2021-07-06 16:28:51  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 70 ,loss= 1.4779977798461914
+2021-07-06 16:28:53  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 80 ,loss= 1.5100388526916504
+2021-07-06 16:28:55  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 90 ,loss= 1.3231381177902222
+2021-07-06 16:28:57  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 100 ,loss= 1.543471097946167
+2021-07-06 16:28:59  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 110 ,loss= 1.4266440868377686
+2021-07-06 16:29:01  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 120 ,loss= 1.472636103630066
+2021-07-06 16:29:03  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 130 ,loss= 1.5284348726272583
+2021-07-06 16:29:05  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 140 ,loss= 1.8028109073638916
+2021-07-06 16:29:07  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 150 ,loss= 1.7009254693984985
+2021-07-06 16:29:09  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 160 ,loss= 1.2570406198501587
+2021-07-06 16:29:11  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 170 ,loss= 1.348374605178833
+2021-07-06 16:29:13  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 180 ,loss= 1.5142841339111328
+2021-07-06 16:29:15  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 190 ,loss= 1.2838568687438965
+2021-07-06 16:29:18  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 200 ,loss= 1.4686496257781982
+2021-07-06 16:29:20  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 210 ,loss= 1.614638328552246
+2021-07-06 16:29:22  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 220 ,loss= 1.4516310691833496
+2021-07-06 16:29:24  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 230 ,loss= 1.3514153957366943
+2021-07-06 16:29:26  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 240 ,loss= 1.264166235923767
+2021-07-06 16:29:28  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 250 ,loss= 1.2486318349838257
+2021-07-06 16:29:30  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 260 ,loss= 1.3452247381210327
+2021-07-06 16:29:32  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 270 ,loss= 1.1735620498657227
+2021-07-06 16:29:34  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 280 ,loss= 1.3457520008087158
+2021-07-06 16:29:36  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 290 ,loss= 1.1079485416412354
+2021-07-06 16:29:38  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 300 ,loss= 1.3166855573654175
+2021-07-06 16:29:40  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 310 ,loss= 1.5274021625518799
+2021-07-06 16:29:42  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 320 ,loss= 1.4396222829818726
+2021-07-06 16:29:44  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 330 ,loss= 1.335065484046936
+2021-07-06 16:29:46  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 340 ,loss= 1.0864944458007812
+2021-07-06 16:29:49  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 350 ,loss= 1.2376439571380615
+2021-07-06 16:29:51  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 360 ,loss= 1.5522096157073975
+2021-07-06 16:29:53  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 370 ,loss= 1.3943474292755127
+2021-07-06 16:29:55  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 380 ,loss= 1.5938525199890137
+2021-07-06 16:29:57  client id= 0 ,round= 2 ,epoch= 1 ,client update iteration= 390 ,loss= 1.222266674041748
+******client id  1 ******
+client_update start
+2021-07-06 16:29:59  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 10 ,loss= 1.8911242485046387
+2021-07-06 16:30:01  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 20 ,loss= 1.9165879487991333
+2021-07-06 16:30:03  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 30 ,loss= 1.854141116142273
+2021-07-06 16:30:05  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 40 ,loss= 1.618072271347046
+2021-07-06 16:30:07  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 50 ,loss= 1.6334894895553589
+2021-07-06 16:30:09  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 60 ,loss= 1.5639891624450684
+2021-07-06 16:30:11  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 70 ,loss= 1.686139464378357
+2021-07-06 16:30:13  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 80 ,loss= 1.787298560142517
+2021-07-06 16:30:15  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 90 ,loss= 1.6745522022247314
+2021-07-06 16:30:18  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 100 ,loss= 1.7673320770263672
+2021-07-06 16:30:20  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 110 ,loss= 1.5025851726531982
+2021-07-06 16:30:22  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 120 ,loss= 1.3067976236343384
+2021-07-06 16:30:24  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 130 ,loss= 1.3904577493667603
+2021-07-06 16:30:26  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 140 ,loss= 1.5157320499420166
+2021-07-06 16:30:28  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 150 ,loss= 1.4041473865509033
+2021-07-06 16:30:30  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 160 ,loss= 1.379396677017212
+2021-07-06 16:30:32  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 170 ,loss= 1.509067416191101
+2021-07-06 16:30:34  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 180 ,loss= 1.3414462804794312
+2021-07-06 16:30:36  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 190 ,loss= 1.41529381275177
+2021-07-06 16:30:38  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 200 ,loss= 1.4563881158828735
+2021-07-06 16:30:40  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 210 ,loss= 1.335214376449585
+2021-07-06 16:30:42  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 220 ,loss= 1.4972246885299683
+2021-07-06 16:30:44  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 230 ,loss= 1.2526447772979736
+2021-07-06 16:30:46  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 240 ,loss= 1.2094261646270752
+2021-07-06 16:30:48  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 250 ,loss= 1.1463395357131958
+2021-07-06 16:30:51  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 260 ,loss= 1.3571903705596924
+2021-07-06 16:30:53  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 270 ,loss= 1.213759422302246
+2021-07-06 16:30:55  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 280 ,loss= 1.2950899600982666
+2021-07-06 16:30:57  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 290 ,loss= 1.2605955600738525
+2021-07-06 16:30:59  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 300 ,loss= 1.287361741065979
+2021-07-06 16:31:01  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 310 ,loss= 1.4989341497421265
+2021-07-06 16:31:03  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 320 ,loss= 1.2209653854370117
+2021-07-06 16:31:05  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 330 ,loss= 1.3802814483642578
+2021-07-06 16:31:07  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 340 ,loss= 1.2218810319900513
+2021-07-06 16:31:09  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 350 ,loss= 1.2888574600219727
+2021-07-06 16:31:11  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 360 ,loss= 1.134670376777649
+2021-07-06 16:31:13  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 370 ,loss= 1.4999641180038452
+2021-07-06 16:31:15  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 380 ,loss= 1.428547978401184
+2021-07-06 16:31:17  client id= 1 ,round= 2 ,epoch= 1 ,client update iteration= 390 ,loss= 1.0205563306808472
+end_round_time 2021-07-06 16:31:17
+start add noise 2021-07-06 16:31:17
+***************************add noise test***************************
+test layer= 0
+***************************add noise test***************************
+test layer= 0
+end add noise time 2021-07-06 16:31:17
+average train loss= 1.4732779317042408
+2021-07-06 16:31:27,round 2,val Accuracy Top1: 20.980000 %
+2021-07-06 16:31:27,round 2,val Accuracy Top5: 68.230000 %
+start_round_time 2021-07-06 16:31:27
+******client id  0 ******
+client_update start
+2021-07-06 16:31:29  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 10 ,loss= 1.8826797008514404
+2021-07-06 16:31:31  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 20 ,loss= 1.722253441810608
+2021-07-06 16:31:33  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 30 ,loss= 1.3528244495391846
+2021-07-06 16:31:36  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 40 ,loss= 1.598149061203003
+2021-07-06 16:31:38  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 50 ,loss= 1.5494577884674072
+2021-07-06 16:31:40  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 60 ,loss= 1.12359619140625
+2021-07-06 16:31:42  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 70 ,loss= 1.3725228309631348
+2021-07-06 16:31:44  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 80 ,loss= 1.0925475358963013
+2021-07-06 16:31:46  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 90 ,loss= 1.2518970966339111
+2021-07-06 16:31:48  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 100 ,loss= 1.371330976486206
+2021-07-06 16:31:50  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 110 ,loss= 1.4540457725524902
+2021-07-06 16:31:52  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 120 ,loss= 1.3795475959777832
+2021-07-06 16:31:54  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 130 ,loss= 1.3379606008529663
+2021-07-06 16:31:56  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 140 ,loss= 1.2586312294006348
+2021-07-06 16:31:58  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 150 ,loss= 1.4822367429733276
+2021-07-06 16:32:00  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 160 ,loss= 1.3258843421936035
+2021-07-06 16:32:02  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 170 ,loss= 0.9038504362106323
+2021-07-06 16:32:04  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 180 ,loss= 1.3079087734222412
+2021-07-06 16:32:06  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 190 ,loss= 1.195107340812683
+2021-07-06 16:32:08  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 200 ,loss= 1.0613715648651123
+2021-07-06 16:32:10  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 210 ,loss= 1.1850736141204834
+2021-07-06 16:32:12  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 220 ,loss= 1.3424901962280273
+2021-07-06 16:32:15  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 230 ,loss= 1.3193925619125366
+2021-07-06 16:32:17  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 240 ,loss= 1.1183769702911377
+2021-07-06 16:32:19  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 250 ,loss= 1.1912380456924438
+2021-07-06 16:32:21  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 260 ,loss= 1.3226191997528076
+2021-07-06 16:32:23  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 270 ,loss= 1.5461760759353638
+2021-07-06 16:32:25  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 280 ,loss= 1.3236819505691528
+2021-07-06 16:32:27  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 290 ,loss= 1.219902515411377
+2021-07-06 16:32:29  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 300 ,loss= 0.9207331538200378
+2021-07-06 16:32:31  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 310 ,loss= 1.1908693313598633
+2021-07-06 16:32:33  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 320 ,loss= 1.2610571384429932
+2021-07-06 16:32:35  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 330 ,loss= 1.1387639045715332
+2021-07-06 16:32:37  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 340 ,loss= 0.9720735549926758
+2021-07-06 16:32:39  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 350 ,loss= 1.2337342500686646
+2021-07-06 16:32:41  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 360 ,loss= 1.4364644289016724
+2021-07-06 16:32:43  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 370 ,loss= 1.2535982131958008
+2021-07-06 16:32:45  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 380 ,loss= 1.17826247215271
+2021-07-06 16:32:47  client id= 0 ,round= 3 ,epoch= 1 ,client update iteration= 390 ,loss= 1.1073840856552124
+******client id  1 ******
+client_update start
+2021-07-06 16:32:50  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 10 ,loss= 1.6455334424972534
+2021-07-06 16:32:52  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 20 ,loss= 1.7418384552001953
+2021-07-06 16:32:54  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 30 ,loss= 1.7545342445373535
+2021-07-06 16:32:56  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 40 ,loss= 1.5993931293487549
+2021-07-06 16:32:58  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 50 ,loss= 1.2066258192062378
+2021-07-06 16:33:00  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 60 ,loss= 1.3082537651062012
+2021-07-06 16:33:02  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 70 ,loss= 1.449217438697815
+2021-07-06 16:33:04  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 80 ,loss= 1.3910136222839355
+2021-07-06 16:33:06  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 90 ,loss= 1.4313251972198486
+2021-07-06 16:33:08  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 100 ,loss= 1.2858054637908936
+2021-07-06 16:33:10  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 110 ,loss= 1.543900966644287
+2021-07-06 16:33:12  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 120 ,loss= 1.4402477741241455
+2021-07-06 16:33:14  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 130 ,loss= 1.145652174949646
+2021-07-06 16:33:16  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 140 ,loss= 1.1431920528411865
+2021-07-06 16:33:18  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 150 ,loss= 1.0788856744766235
+2021-07-06 16:33:20  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 160 ,loss= 1.6144667863845825
+2021-07-06 16:33:22  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 170 ,loss= 1.3646008968353271
+2021-07-06 16:33:25  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 180 ,loss= 0.9403159022331238
+2021-07-06 16:33:27  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 190 ,loss= 1.1509488821029663
+2021-07-06 16:33:29  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 200 ,loss= 1.3442485332489014
+2021-07-06 16:33:31  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 210 ,loss= 1.2961090803146362
+2021-07-06 16:33:33  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 220 ,loss= 1.2192940711975098
+2021-07-06 16:33:35  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 230 ,loss= 1.2717291116714478
+2021-07-06 16:33:37  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 240 ,loss= 1.1672241687774658
+2021-07-06 16:33:39  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 250 ,loss= 1.2090156078338623
+2021-07-06 16:33:41  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 260 ,loss= 0.9536058306694031
+2021-07-06 16:33:43  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 270 ,loss= 0.9726868271827698
+2021-07-06 16:33:45  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 280 ,loss= 1.3586914539337158
+2021-07-06 16:33:47  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 290 ,loss= 1.1203641891479492
+2021-07-06 16:33:49  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 300 ,loss= 1.4233694076538086
+2021-07-06 16:33:51  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 310 ,loss= 1.0947824716567993
+2021-07-06 16:33:53  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 320 ,loss= 1.2198108434677124
+2021-07-06 16:33:55  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 330 ,loss= 0.9469711780548096
+2021-07-06 16:33:57  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 340 ,loss= 1.117061972618103
+2021-07-06 16:33:59  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 350 ,loss= 1.0804938077926636
+2021-07-06 16:34:01  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 360 ,loss= 1.071686863899231
+2021-07-06 16:34:04  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 370 ,loss= 1.2915079593658447
+2021-07-06 16:34:06  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 380 ,loss= 0.8148311376571655
+2021-07-06 16:34:08  client id= 1 ,round= 3 ,epoch= 1 ,client update iteration= 390 ,loss= 1.391897201538086
+end_round_time 2021-07-06 16:34:08
+start add noise 2021-07-06 16:34:08
+***************************add noise test***************************
+test layer= 0
+***************************add noise test***************************
+test layer= 0
+end add noise time 2021-07-06 16:34:08
+average train loss= 1.299650126101111
+2021-07-06 16:34:18,round 3,val Accuracy Top1: 33.560000 %
+2021-07-06 16:34:18,round 3,val Accuracy Top5: 82.310000 %
+start_round_time 2021-07-06 16:34:18
+******client id  0 ******
+client_update start
+2021-07-06 16:34:20  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 10 ,loss= 1.4658106565475464
+2021-07-06 16:34:22  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 20 ,loss= 1.3886358737945557
+2021-07-06 16:34:24  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 30 ,loss= 1.388858675956726
+2021-07-06 16:34:26  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 40 ,loss= 1.303761601448059
+2021-07-06 16:34:28  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 50 ,loss= 1.1497046947479248
+2021-07-06 16:34:30  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 60 ,loss= 1.1317081451416016
+2021-07-06 16:34:32  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 70 ,loss= 1.3930752277374268
+2021-07-06 16:34:34  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 80 ,loss= 0.9963445663452148
+2021-07-06 16:34:36  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 90 ,loss= 1.3133313655853271
+2021-07-06 16:34:38  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 100 ,loss= 1.255455493927002
+2021-07-06 16:34:40  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 110 ,loss= 1.2100234031677246
+2021-07-06 16:34:42  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 120 ,loss= 1.3414413928985596
+2021-07-06 16:34:44  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 130 ,loss= 1.3900279998779297
+2021-07-06 16:34:46  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 140 ,loss= 1.4196668863296509
+2021-07-06 16:34:48  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 150 ,loss= 1.3353666067123413
+2021-07-06 16:34:50  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 160 ,loss= 1.2395867109298706
+2021-07-06 16:34:53  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 170 ,loss= 1.0867241621017456
+2021-07-06 16:34:55  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 180 ,loss= 0.9933003783226013
+2021-07-06 16:34:57  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 190 ,loss= 0.9933481812477112
+2021-07-06 16:34:59  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 200 ,loss= 1.1941581964492798
+2021-07-06 16:35:01  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 210 ,loss= 0.9824885129928589
+2021-07-06 16:35:03  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 220 ,loss= 1.1365394592285156
+2021-07-06 16:35:05  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 230 ,loss= 1.2773690223693848
+2021-07-06 16:35:07  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 240 ,loss= 1.241701602935791
+2021-07-06 16:35:09  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 250 ,loss= 0.9634605050086975
+2021-07-06 16:35:11  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 260 ,loss= 1.0469598770141602
+2021-07-06 16:35:13  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 270 ,loss= 1.1177599430084229
+2021-07-06 16:35:15  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 280 ,loss= 1.0185585021972656
+2021-07-06 16:35:17  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 290 ,loss= 1.0524003505706787
+2021-07-06 16:35:19  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 300 ,loss= 1.0290796756744385
+2021-07-06 16:35:21  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 310 ,loss= 1.330026388168335
+2021-07-06 16:35:23  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 320 ,loss= 0.8835084438323975
+2021-07-06 16:35:25  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 330 ,loss= 1.1590701341629028
+2021-07-06 16:35:28  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 340 ,loss= 1.0572487115859985
+2021-07-06 16:35:30  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 350 ,loss= 1.0038100481033325
+2021-07-06 16:35:32  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 360 ,loss= 1.1311619281768799
+2021-07-06 16:35:34  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 370 ,loss= 1.0934746265411377
+2021-07-06 16:35:36  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 380 ,loss= 0.9263876676559448
+2021-07-06 16:35:38  client id= 0 ,round= 4 ,epoch= 1 ,client update iteration= 390 ,loss= 1.1335266828536987
+******client id  1 ******
+client_update start
+2021-07-06 16:35:40  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 10 ,loss= 1.3763562440872192
+2021-07-06 16:35:42  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 20 ,loss= 1.4792624711990356
+2021-07-06 16:35:44  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 30 ,loss= 1.4327865839004517
+2021-07-06 16:35:46  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 40 ,loss= 1.363387107849121
+2021-07-06 16:35:48  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 50 ,loss= 1.0591226816177368
+2021-07-06 16:35:50  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 60 ,loss= 1.0403499603271484
+2021-07-06 16:35:52  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 70 ,loss= 1.5492864847183228
+2021-07-06 16:35:54  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 80 ,loss= 1.4086462259292603
+2021-07-06 16:35:56  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 90 ,loss= 1.4242507219314575
+2021-07-06 16:35:59  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 100 ,loss= 1.111883282661438
+2021-07-06 16:36:01  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 110 ,loss= 0.874206006526947
+2021-07-06 16:36:03  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 120 ,loss= 1.3180691003799438
+2021-07-06 16:36:05  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 130 ,loss= 1.2790632247924805
+2021-07-06 16:36:07  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 140 ,loss= 1.0239214897155762
+2021-07-06 16:36:09  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 150 ,loss= 1.0044777393341064
+2021-07-06 16:36:11  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 160 ,loss= 1.0319372415542603
+2021-07-06 16:36:13  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 170 ,loss= 1.3075511455535889
+2021-07-06 16:36:15  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 180 ,loss= 1.1376086473464966
+2021-07-06 16:36:17  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 190 ,loss= 1.1454412937164307
+2021-07-06 16:36:19  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 200 ,loss= 1.217759609222412
+2021-07-06 16:36:21  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 210 ,loss= 1.2842683792114258
+2021-07-06 16:36:23  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 220 ,loss= 1.1145446300506592
+2021-07-06 16:36:25  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 230 ,loss= 1.2589607238769531
+2021-07-06 16:36:27  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 240 ,loss= 1.0636028051376343
+2021-07-06 16:36:29  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 250 ,loss= 1.0410943031311035
+2021-07-06 16:36:31  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 260 ,loss= 1.1219524145126343
+2021-07-06 16:36:34  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 270 ,loss= 1.2013483047485352
+2021-07-06 16:36:36  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 280 ,loss= 1.0553667545318604
+2021-07-06 16:36:38  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 290 ,loss= 0.9067813158035278
+2021-07-06 16:36:40  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 300 ,loss= 1.1707664728164673
+2021-07-06 16:36:42  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 310 ,loss= 1.1082372665405273
+2021-07-06 16:36:44  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 320 ,loss= 0.9477822780609131
+2021-07-06 16:36:46  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 330 ,loss= 1.0156488418579102
+2021-07-06 16:36:48  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 340 ,loss= 0.9015182256698608
+2021-07-06 16:36:50  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 350 ,loss= 1.1129072904586792
+2021-07-06 16:36:52  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 360 ,loss= 1.063355803489685
+2021-07-06 16:36:54  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 370 ,loss= 1.1021463871002197
+2021-07-06 16:36:56  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 380 ,loss= 1.1027541160583496
+2021-07-06 16:36:58  client id= 1 ,round= 4 ,epoch= 1 ,client update iteration= 390 ,loss= 0.8957458734512329
+end_round_time 2021-07-06 16:36:58
+start add noise 2021-07-06 16:36:58
+***************************add noise test***************************
+test layer= 0
+***************************add noise test***************************
+test layer= 0
+end add noise time 2021-07-06 16:36:58
+average train loss= 1.163657429044509
+2021-07-06 16:37:08,round 4,val Accuracy Top1: 27.600000 %
+2021-07-06 16:37:08,round 4,val Accuracy Top5: 73.600000 %
+start_round_time 2021-07-06 16:37:08
+******client id  0 ******
+client_update start
+2021-07-06 16:37:10  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 10 ,loss= 1.4962987899780273
+2021-07-06 16:37:12  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 20 ,loss= 1.1596217155456543
+2021-07-06 16:37:14  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 30 ,loss= 1.2872998714447021
+2021-07-06 16:37:17  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 40 ,loss= 1.1969940662384033
+2021-07-06 16:37:19  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 50 ,loss= 1.0619505643844604
+2021-07-06 16:37:21  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 60 ,loss= 1.1582093238830566
+2021-07-06 16:37:23  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 70 ,loss= 1.0981240272521973
+2021-07-06 16:37:25  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 80 ,loss= 1.3054505586624146
+2021-07-06 16:37:27  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 90 ,loss= 1.0513765811920166
+2021-07-06 16:37:29  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 100 ,loss= 0.968751072883606
+2021-07-06 16:37:31  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 110 ,loss= 1.0270568132400513
+2021-07-06 16:37:33  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 120 ,loss= 1.2214900255203247
+2021-07-06 16:37:35  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 130 ,loss= 1.2739773988723755
+2021-07-06 16:37:37  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 140 ,loss= 1.125773310661316
+2021-07-06 16:37:39  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 150 ,loss= 1.201038122177124
+2021-07-06 16:37:41  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 160 ,loss= 1.0952775478363037
+2021-07-06 16:37:43  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 170 ,loss= 0.9888806343078613
+2021-07-06 16:37:46  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 180 ,loss= 1.2390466928482056
+2021-07-06 16:37:48  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 190 ,loss= 1.1748546361923218
+2021-07-06 16:37:50  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 200 ,loss= 1.088128685951233
+2021-07-06 16:37:52  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 210 ,loss= 0.7496683597564697
+2021-07-06 16:37:54  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 220 ,loss= 1.0587644577026367
+2021-07-06 16:37:56  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 230 ,loss= 0.9274060726165771
+2021-07-06 16:37:58  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 240 ,loss= 1.1030930280685425
+2021-07-06 16:38:00  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 250 ,loss= 0.9740597605705261
+2021-07-06 16:38:02  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 260 ,loss= 0.8189765810966492
+2021-07-06 16:38:04  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 270 ,loss= 0.9925833344459534
+2021-07-06 16:38:06  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 280 ,loss= 1.05633544921875
+2021-07-06 16:38:08  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 290 ,loss= 1.0850476026535034
+2021-07-06 16:38:10  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 300 ,loss= 0.9696236848831177
+2021-07-06 16:38:12  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 310 ,loss= 1.2282147407531738
+2021-07-06 16:38:14  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 320 ,loss= 0.8359844088554382
+2021-07-06 16:38:17  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 330 ,loss= 1.2169908285140991
+2021-07-06 16:38:19  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 340 ,loss= 0.8417626619338989
+2021-07-06 16:38:21  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 350 ,loss= 1.1690670251846313
+2021-07-06 16:38:23  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 360 ,loss= 0.9416884183883667
+2021-07-06 16:38:25  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 370 ,loss= 0.9588187336921692
+2021-07-06 16:38:27  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 380 ,loss= 0.9058924913406372
+2021-07-06 16:38:29  client id= 0 ,round= 5 ,epoch= 1 ,client update iteration= 390 ,loss= 1.2107625007629395
+******client id  1 ******
+client_update start
+2021-07-06 16:38:31  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 10 ,loss= 1.7576866149902344
+2021-07-06 16:38:33  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 20 ,loss= 1.3263028860092163
+2021-07-06 16:38:35  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 30 ,loss= 1.2536405324935913
+2021-07-06 16:38:37  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 40 ,loss= 1.271775722503662
+2021-07-06 16:38:39  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 50 ,loss= 1.2093535661697388
+2021-07-06 16:38:41  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 60 ,loss= 1.0639722347259521
+2021-07-06 16:38:43  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 70 ,loss= 1.2045115232467651
+2021-07-06 16:38:46  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 80 ,loss= 1.08333158493042
+2021-07-06 16:38:48  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 90 ,loss= 1.1350176334381104
+2021-07-06 16:38:50  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 100 ,loss= 1.1610071659088135
+2021-07-06 16:38:52  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 110 ,loss= 1.1329773664474487
+2021-07-06 16:38:54  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 120 ,loss= 1.144190788269043
+2021-07-06 16:38:56  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 130 ,loss= 1.089107871055603
+2021-07-06 16:38:58  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 140 ,loss= 1.035431146621704
+2021-07-06 16:39:00  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 150 ,loss= 0.9194868206977844
+2021-07-06 16:39:02  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 160 ,loss= 0.8814845085144043
+2021-07-06 16:39:04  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 170 ,loss= 1.3177201747894287
+2021-07-06 16:39:06  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 180 ,loss= 0.8445631265640259
+2021-07-06 16:39:08  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 190 ,loss= 1.122226595878601
+2021-07-06 16:39:10  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 200 ,loss= 1.0237233638763428
+2021-07-06 16:39:13  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 210 ,loss= 1.086795449256897
+2021-07-06 16:39:15  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 220 ,loss= 0.97586590051651
+2021-07-06 16:39:17  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 230 ,loss= 0.9187556505203247
+2021-07-06 16:39:19  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 240 ,loss= 1.1324061155319214
+2021-07-06 16:39:21  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 250 ,loss= 1.0077614784240723
+2021-07-06 16:39:23  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 260 ,loss= 1.2680046558380127
+2021-07-06 16:39:25  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 270 ,loss= 0.9392166137695312
+2021-07-06 16:39:27  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 280 ,loss= 0.9545994997024536
+2021-07-06 16:39:29  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 290 ,loss= 1.025994896888733
+2021-07-06 16:39:31  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 300 ,loss= 0.8755643367767334
+2021-07-06 16:39:33  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 310 ,loss= 1.258152723312378
+2021-07-06 16:39:35  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 320 ,loss= 0.9243041276931763
+2021-07-06 16:39:37  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 330 ,loss= 0.9758001565933228
+2021-07-06 16:39:39  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 340 ,loss= 1.2066044807434082
+2021-07-06 16:39:41  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 350 ,loss= 0.8529775142669678
+2021-07-06 16:39:43  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 360 ,loss= 0.7976245284080505
+2021-07-06 16:39:45  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 370 ,loss= 0.9737175107002258
+2021-07-06 16:39:47  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 380 ,loss= 1.101062297821045
+2021-07-06 16:39:49  client id= 1 ,round= 5 ,epoch= 1 ,client update iteration= 390 ,loss= 0.8275496363639832
+end_round_time 2021-07-06 16:39:50
+start add noise 2021-07-06 16:39:50
+***************************add noise test***************************
+test layer= 0
+***************************add noise test***************************
+test layer= 0
+end add noise time 2021-07-06 16:39:50
+average train loss= 1.1005324369196392
+2021-07-06 16:40:00,round 5,val Accuracy Top1: 16.100000 %
+2021-07-06 16:40:00,round 5,val Accuracy Top5: 60.750000 %
+start_round_time 2021-07-06 16:40:00
+******client id  0 ******
+client_update start
+2021-07-06 16:40:02  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 10 ,loss= 1.7055953741073608
+2021-07-06 16:40:04  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 20 ,loss= 1.4694948196411133
+2021-07-06 16:40:06  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 30 ,loss= 1.1702450513839722
+2021-07-06 16:40:08  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 40 ,loss= 1.1669914722442627
+2021-07-06 16:40:10  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 50 ,loss= 1.2670214176177979
+2021-07-06 16:40:12  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 60 ,loss= 1.374165654182434
+2021-07-06 16:40:14  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 70 ,loss= 1.1341091394424438
+2021-07-06 16:40:16  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 80 ,loss= 1.0847864151000977
+2021-07-06 16:40:18  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 90 ,loss= 1.1721899509429932
+2021-07-06 16:40:20  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 100 ,loss= 0.9600989818572998
+2021-07-06 16:40:22  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 110 ,loss= 1.2424448728561401
+2021-07-06 16:40:24  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 120 ,loss= 1.3499609231948853
+2021-07-06 16:40:27  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 130 ,loss= 1.152211308479309
+2021-07-06 16:40:29  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 140 ,loss= 1.2773455381393433
+2021-07-06 16:40:31  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 150 ,loss= 1.056422472000122
+2021-07-06 16:40:33  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 160 ,loss= 1.132651686668396
+2021-07-06 16:40:35  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 170 ,loss= 1.029003620147705
+2021-07-06 16:40:37  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 180 ,loss= 0.8304207921028137
+2021-07-06 16:40:39  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 190 ,loss= 0.7781638503074646
+2021-07-06 16:40:41  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 200 ,loss= 0.9174344539642334
+2021-07-06 16:40:43  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 210 ,loss= 1.0411101579666138
+2021-07-06 16:40:45  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 220 ,loss= 0.900337815284729
+2021-07-06 16:40:47  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 230 ,loss= 1.0028432607650757
+2021-07-06 16:40:49  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 240 ,loss= 0.951647937297821
+2021-07-06 16:40:51  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 250 ,loss= 1.0259184837341309
+2021-07-06 16:40:53  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 260 ,loss= 0.9260773062705994
+2021-07-06 16:40:55  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 270 ,loss= 0.9406535029411316
+2021-07-06 16:40:58  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 280 ,loss= 0.8179817199707031
+2021-07-06 16:41:00  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 290 ,loss= 0.8500143885612488
+2021-07-06 16:41:02  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 300 ,loss= 1.001564383506775
+2021-07-06 16:41:04  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 310 ,loss= 0.9121508002281189
+2021-07-06 16:41:06  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 320 ,loss= 0.8980143666267395
+2021-07-06 16:41:08  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 330 ,loss= 0.8757697343826294
+2021-07-06 16:41:10  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 340 ,loss= 0.8720420598983765
+2021-07-06 16:41:12  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 350 ,loss= 0.7149336934089661
+2021-07-06 16:41:14  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 360 ,loss= 0.6340187191963196
+2021-07-06 16:41:16  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 370 ,loss= 0.7853046655654907
+2021-07-06 16:41:18  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 380 ,loss= 1.0291002988815308
+2021-07-06 16:41:20  client id= 0 ,round= 6 ,epoch= 1 ,client update iteration= 390 ,loss= 0.8829124569892883
+******client id  1 ******
+client_update start
+2021-07-06 16:41:22  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 10 ,loss= 1.7638057470321655
+2021-07-06 16:41:24  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 20 ,loss= 1.692209005355835
+2021-07-06 16:41:26  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 30 ,loss= 1.594096302986145
+2021-07-06 16:41:28  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 40 ,loss= 1.2805827856063843
+2021-07-06 16:41:31  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 50 ,loss= 1.084855318069458
+2021-07-06 16:41:33  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 60 ,loss= 1.3942335844039917
+2021-07-06 16:41:35  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 70 ,loss= 1.2284008264541626
+2021-07-06 16:41:37  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 80 ,loss= 0.9518131017684937
+2021-07-06 16:41:39  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 90 ,loss= 1.1847026348114014
+2021-07-06 16:41:41  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 100 ,loss= 1.2933300733566284
+2021-07-06 16:41:43  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 110 ,loss= 1.080907940864563
+2021-07-06 16:41:45  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 120 ,loss= 1.1791750192642212
+2021-07-06 16:41:47  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 130 ,loss= 0.8788369297981262
+2021-07-06 16:41:49  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 140 ,loss= 1.2220733165740967
+2021-07-06 16:41:51  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 150 ,loss= 1.060389518737793
+2021-07-06 16:41:53  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 160 ,loss= 1.043272614479065
+2021-07-06 16:41:55  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 170 ,loss= 0.9793652296066284
+2021-07-06 16:41:57  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 180 ,loss= 1.276547908782959
+2021-07-06 16:41:59  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 190 ,loss= 1.0724589824676514
+2021-07-06 16:42:01  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 200 ,loss= 0.9437696933746338
+2021-07-06 16:42:03  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 210 ,loss= 1.0037446022033691
+2021-07-06 16:42:05  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 220 ,loss= 1.2565152645111084
+2021-07-06 16:42:07  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 230 ,loss= 1.014716386795044
+2021-07-06 16:42:10  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 240 ,loss= 0.9468548893928528
+2021-07-06 16:42:12  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 250 ,loss= 0.8454169034957886
+2021-07-06 16:42:14  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 260 ,loss= 1.2015385627746582
+2021-07-06 16:42:16  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 270 ,loss= 1.032345175743103
+2021-07-06 16:42:18  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 280 ,loss= 1.1806849241256714
+2021-07-06 16:42:20  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 290 ,loss= 1.0620005130767822
+2021-07-06 16:42:22  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 300 ,loss= 1.1657313108444214
+2021-07-06 16:42:24  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 310 ,loss= 1.1585711240768433
+2021-07-06 16:42:26  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 320 ,loss= 0.9811338782310486
+2021-07-06 16:42:28  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 330 ,loss= 1.100024938583374
+2021-07-06 16:42:30  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 340 ,loss= 1.076263666152954
+2021-07-06 16:42:32  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 350 ,loss= 1.065691590309143
+2021-07-06 16:42:34  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 360 ,loss= 1.0793176889419556
+2021-07-06 16:42:36  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 370 ,loss= 0.9581459760665894
+2021-07-06 16:42:38  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 380 ,loss= 1.1280964612960815
+2021-07-06 16:42:40  client id= 1 ,round= 6 ,epoch= 1 ,client update iteration= 390 ,loss= 1.0541878938674927
+end_round_time 2021-07-06 16:42:40
+start add noise 2021-07-06 16:42:40
+***************************add noise test***************************
+test layer= 0
+***************************add noise test***************************
+test layer= 0
+end add noise time 2021-07-06 16:42:40
+average train loss= 1.1020221169037587
+2021-07-06 16:42:50,round 6,val Accuracy Top1: 20.890000 %
+2021-07-06 16:42:50,round 6,val Accuracy Top5: 64.530000 %
+start_round_time 2021-07-06 16:42:50
+******client id  0 ******
+client_update start
+2021-07-06 16:42:52  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 10 ,loss= 1.6730327606201172
+2021-07-06 16:42:54  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 20 ,loss= 1.385178565979004
+2021-07-06 16:42:56  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 30 ,loss= 1.4334309101104736
+2021-07-06 16:42:58  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 40 ,loss= 1.3928203582763672
+2021-07-06 16:43:01  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 50 ,loss= 1.515730381011963
+2021-07-06 16:43:03  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 60 ,loss= 1.1777753829956055
+2021-07-06 16:43:05  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 70 ,loss= 0.9884679913520813
+2021-07-06 16:43:07  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 80 ,loss= 1.2054753303527832
+2021-07-06 16:43:09  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 90 ,loss= 1.1755108833312988
+2021-07-06 16:43:11  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 100 ,loss= 1.388454556465149
+2021-07-06 16:43:13  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 110 ,loss= 1.2572271823883057
+2021-07-06 16:43:15  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 120 ,loss= 1.3432446718215942
+2021-07-06 16:43:17  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 130 ,loss= 0.9064958095550537
+2021-07-06 16:43:19  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 140 ,loss= 1.0622042417526245
+2021-07-06 16:43:21  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 150 ,loss= 1.2959280014038086
+2021-07-06 16:43:23  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 160 ,loss= 1.160945177078247
+2021-07-06 16:43:25  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 170 ,loss= 1.0739178657531738
+2021-07-06 16:43:27  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 180 ,loss= 0.9869815111160278
+2021-07-06 16:43:29  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 190 ,loss= 0.8054119944572449
+2021-07-06 16:43:31  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 200 ,loss= 0.8522155284881592
+2021-07-06 16:43:33  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 210 ,loss= 1.2226377725601196
+2021-07-06 16:43:35  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 220 ,loss= 1.0387016534805298
+2021-07-06 16:43:38  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 230 ,loss= 0.893651008605957
+2021-07-06 16:43:40  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 240 ,loss= 0.9222270846366882
+2021-07-06 16:43:42  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 250 ,loss= 0.898179292678833
+2021-07-06 16:43:44  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 260 ,loss= 1.449770212173462
+2021-07-06 16:43:46  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 270 ,loss= 0.9636011719703674
+2021-07-06 16:43:48  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 280 ,loss= 0.8994448184967041
+2021-07-06 16:43:50  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 290 ,loss= 1.0684322118759155
+2021-07-06 16:43:52  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 300 ,loss= 0.8119542598724365
+2021-07-06 16:43:54  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 310 ,loss= 0.9402382373809814
+2021-07-06 16:43:56  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 320 ,loss= 1.050280213356018
+2021-07-06 16:43:58  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 330 ,loss= 0.9760619401931763
+2021-07-06 16:44:00  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 340 ,loss= 0.7291154861450195
+2021-07-06 16:44:02  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 350 ,loss= 0.9966344237327576
+2021-07-06 16:44:04  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 360 ,loss= 0.774201512336731
+2021-07-06 16:44:06  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 370 ,loss= 0.8789967894554138
+2021-07-06 16:44:08  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 380 ,loss= 0.8952863216400146
+2021-07-06 16:44:10  client id= 0 ,round= 7 ,epoch= 1 ,client update iteration= 390 ,loss= 0.9091647267341614
+******client id  1 ******
+client_update start
+2021-07-06 16:44:13  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 10 ,loss= 1.5535151958465576
+2021-07-06 16:44:15  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 20 ,loss= 1.6124534606933594
+2021-07-06 16:44:17  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 30 ,loss= 1.0621124505996704
+2021-07-06 16:44:19  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 40 ,loss= 1.59694242477417
+2021-07-06 16:44:21  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 50 ,loss= 1.0682443380355835
+2021-07-06 16:44:23  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 60 ,loss= 1.340471863746643
+2021-07-06 16:44:25  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 70 ,loss= 1.1679575443267822
+2021-07-06 16:44:27  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 80 ,loss= 1.2405178546905518
+2021-07-06 16:44:29  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 90 ,loss= 1.092437744140625
+2021-07-06 16:44:31  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 100 ,loss= 1.476811170578003
+2021-07-06 16:44:33  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 110 ,loss= 1.3266693353652954
+2021-07-06 16:44:35  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 120 ,loss= 0.9038253426551819
+2021-07-06 16:44:37  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 130 ,loss= 1.455301284790039
+2021-07-06 16:44:39  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 140 ,loss= 1.2457188367843628
+2021-07-06 16:44:41  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 150 ,loss= 1.4233999252319336
+2021-07-06 16:44:43  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 160 ,loss= 1.1970967054367065
+2021-07-06 16:44:45  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 170 ,loss= 1.1578407287597656
+2021-07-06 16:44:47  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 180 ,loss= 1.3392256498336792
+2021-07-06 16:44:50  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 190 ,loss= 1.2277017831802368
+2021-07-06 16:44:52  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 200 ,loss= 1.1693720817565918
+2021-07-06 16:44:54  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 210 ,loss= 1.1419261693954468
+2021-07-06 16:44:56  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 220 ,loss= 1.0061118602752686
+2021-07-06 16:44:58  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 230 ,loss= 1.0713101625442505
+2021-07-06 16:45:00  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 240 ,loss= 0.864064633846283
+2021-07-06 16:45:02  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 250 ,loss= 0.8800711631774902
+2021-07-06 16:45:04  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 260 ,loss= 1.075244665145874
+2021-07-06 16:45:06  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 270 ,loss= 0.9244230389595032
+2021-07-06 16:45:08  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 280 ,loss= 1.1805881261825562
+2021-07-06 16:45:10  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 290 ,loss= 0.7925384640693665
+2021-07-06 16:45:12  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 300 ,loss= 1.1047728061676025
+2021-07-06 16:45:14  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 310 ,loss= 1.1859227418899536
+2021-07-06 16:45:16  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 320 ,loss= 1.1161764860153198
+2021-07-06 16:45:18  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 330 ,loss= 0.8469050526618958
+2021-07-06 16:45:20  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 340 ,loss= 1.428670048713684
+2021-07-06 16:45:22  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 350 ,loss= 0.9588254690170288
+2021-07-06 16:45:24  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 360 ,loss= 0.903316855430603
+2021-07-06 16:45:26  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 370 ,loss= 0.998733639717102
+2021-07-06 16:45:28  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 380 ,loss= 0.9437508583068848
+2021-07-06 16:45:31  client id= 1 ,round= 7 ,epoch= 1 ,client update iteration= 390 ,loss= 1.03180992603302
+end_round_time 2021-07-06 16:45:31
+start add noise 2021-07-06 16:45:31
+***************************add noise test***************************
+test layer= 0
+***************************add noise test***************************
+test layer= 0
+end add noise time 2021-07-06 16:45:31
+average train loss= 1.1033391531775978
+2021-07-06 16:45:41,round 7,val Accuracy Top1: 25.890000 %
+2021-07-06 16:45:41,round 7,val Accuracy Top5: 74.650000 %
+start_round_time 2021-07-06 16:45:41
+******client id  0 ******
+client_update start
+2021-07-06 16:45:43  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 10 ,loss= 1.4491379261016846
+2021-07-06 16:45:45  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 20 ,loss= 1.2109382152557373
+2021-07-06 16:45:47  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 30 ,loss= 0.9154111742973328
+2021-07-06 16:45:49  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 40 ,loss= 0.9740976095199585
+2021-07-06 16:45:51  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 50 ,loss= 1.1617553234100342
+2021-07-06 16:45:53  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 60 ,loss= 1.2408485412597656
+2021-07-06 16:45:55  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 70 ,loss= 0.6720426082611084
+2021-07-06 16:45:57  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 80 ,loss= 1.0898255109786987
+2021-07-06 16:45:59  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 90 ,loss= 1.0854796171188354
+2021-07-06 16:46:01  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 100 ,loss= 0.7248306274414062
+2021-07-06 16:46:03  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 110 ,loss= 1.0255699157714844
+2021-07-06 16:46:05  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 120 ,loss= 0.9740606546401978
+2021-07-06 16:46:07  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 130 ,loss= 1.1151398420333862
+2021-07-06 16:46:09  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 140 ,loss= 0.8891874551773071
+2021-07-06 16:46:11  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 150 ,loss= 0.8635244369506836
+2021-07-06 16:46:13  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 160 ,loss= 1.0197759866714478
+2021-07-06 16:46:15  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 170 ,loss= 0.677871584892273
+2021-07-06 16:46:18  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 180 ,loss= 0.8712021112442017
+2021-07-06 16:46:20  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 190 ,loss= 0.9972417950630188
+2021-07-06 16:46:22  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 200 ,loss= 0.7243445515632629
+2021-07-06 16:46:24  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 210 ,loss= 1.0980983972549438
+2021-07-06 16:46:26  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 220 ,loss= 0.8458570241928101
+2021-07-06 16:46:28  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 230 ,loss= 1.3716984987258911
+2021-07-06 16:46:30  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 240 ,loss= 0.7217105627059937
+2021-07-06 16:46:32  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 250 ,loss= 0.8314494490623474
+2021-07-06 16:46:34  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 260 ,loss= 1.0046387910842896
+2021-07-06 16:46:36  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 270 ,loss= 0.8681606650352478
+2021-07-06 16:46:38  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 280 ,loss= 0.6830589175224304
+2021-07-06 16:46:40  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 290 ,loss= 1.1753569841384888
+2021-07-06 16:46:42  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 300 ,loss= 0.7832602858543396
+2021-07-06 16:46:45  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 310 ,loss= 0.894748330116272
+2021-07-06 16:46:47  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 320 ,loss= 0.9031463265419006
+2021-07-06 16:46:49  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 330 ,loss= 0.9311864972114563
+2021-07-06 16:46:51  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 340 ,loss= 1.0131609439849854
+2021-07-06 16:46:53  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 350 ,loss= 0.8498174548149109
+2021-07-06 16:46:55  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 360 ,loss= 0.7785791754722595
+2021-07-06 16:46:57  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 370 ,loss= 0.9109351634979248
+2021-07-06 16:46:59  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7803287506103516
+2021-07-06 16:47:01  client id= 0 ,round= 8 ,epoch= 1 ,client update iteration= 390 ,loss= 0.936735987663269
+******client id  1 ******
+client_update start
+2021-07-06 16:47:03  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 10 ,loss= 1.5183007717132568
+2021-07-06 16:47:06  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 20 ,loss= 1.19198739528656
+2021-07-06 16:47:08  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 30 ,loss= 1.1359565258026123
+2021-07-06 16:47:10  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 40 ,loss= 1.1675485372543335
+2021-07-06 16:47:12  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 50 ,loss= 1.038033127784729
+2021-07-06 16:47:14  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 60 ,loss= 1.2135493755340576
+2021-07-06 16:47:16  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 70 ,loss= 0.9038697481155396
+2021-07-06 16:47:18  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 80 ,loss= 0.7988357543945312
+2021-07-06 16:47:20  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 90 ,loss= 1.1912155151367188
+2021-07-06 16:47:22  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 100 ,loss= 1.0346890687942505
+2021-07-06 16:47:24  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 110 ,loss= 0.7594788670539856
+2021-07-06 16:47:26  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 120 ,loss= 0.8959881067276001
+2021-07-06 16:47:28  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 130 ,loss= 1.1528488397598267
+2021-07-06 16:47:30  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 140 ,loss= 1.1063934564590454
+2021-07-06 16:47:32  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 150 ,loss= 0.9162986278533936
+2021-07-06 16:47:34  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 160 ,loss= 1.0612651109695435
+2021-07-06 16:47:36  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 170 ,loss= 0.8535910248756409
+2021-07-06 16:47:39  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 180 ,loss= 0.9967392086982727
+2021-07-06 16:47:41  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 190 ,loss= 0.9346799254417419
+2021-07-06 16:47:43  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 200 ,loss= 1.098190426826477
+2021-07-06 16:47:45  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 210 ,loss= 1.0006837844848633
+2021-07-06 16:47:47  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 220 ,loss= 0.8973507285118103
+2021-07-06 16:47:49  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 230 ,loss= 1.1636241674423218
+2021-07-06 16:47:51  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 240 ,loss= 1.0750036239624023
+2021-07-06 16:47:53  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 250 ,loss= 0.8685703277587891
+2021-07-06 16:47:55  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 260 ,loss= 0.8864530920982361
+2021-07-06 16:47:57  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 270 ,loss= 1.0374375581741333
+2021-07-06 16:47:59  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 280 ,loss= 1.0050221681594849
+2021-07-06 16:48:01  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 290 ,loss= 0.8207061290740967
+2021-07-06 16:48:03  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 300 ,loss= 0.7690598368644714
+2021-07-06 16:48:05  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 310 ,loss= 1.3178542852401733
+2021-07-06 16:48:07  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 320 ,loss= 0.8852556347846985
+2021-07-06 16:48:09  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 330 ,loss= 0.9569708108901978
+2021-07-06 16:48:11  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 340 ,loss= 0.898158848285675
+2021-07-06 16:48:13  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 350 ,loss= 0.9025585055351257
+2021-07-06 16:48:15  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 360 ,loss= 0.9368607997894287
+2021-07-06 16:48:18  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 370 ,loss= 0.9226464033126831
+2021-07-06 16:48:20  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7307142615318298
+2021-07-06 16:48:22  client id= 1 ,round= 8 ,epoch= 1 ,client update iteration= 390 ,loss= 1.07231867313385
+end_round_time 2021-07-06 16:48:22
+start add noise 2021-07-06 16:48:22
+***************************add noise test***************************
+test layer= 0
+***************************add noise test***************************
+test layer= 0
+end add noise time 2021-07-06 16:48:22
+average train loss= 1.0036564781080428
+2021-07-06 16:48:32,round 8,val Accuracy Top1: 25.210000 %
+2021-07-06 16:48:32,round 8,val Accuracy Top5: 71.730000 %
+start_round_time 2021-07-06 16:48:32
+******client id  0 ******
+client_update start
+2021-07-06 16:48:34  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 10 ,loss= 1.8789407014846802
+2021-07-06 16:48:36  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 20 ,loss= 1.5946004390716553
+2021-07-06 16:48:38  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 30 ,loss= 1.5608714818954468
+2021-07-06 16:48:40  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 40 ,loss= 1.1732722520828247
+2021-07-06 16:48:42  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 50 ,loss= 1.2976667881011963
+2021-07-06 16:48:44  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 60 ,loss= 0.9894395470619202
+2021-07-06 16:48:46  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 70 ,loss= 0.8630642890930176
+2021-07-06 16:48:48  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 80 ,loss= 1.0369099378585815
+2021-07-06 16:48:50  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 90 ,loss= 1.084410548210144
+2021-07-06 16:48:52  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 100 ,loss= 1.1858885288238525
+2021-07-06 16:48:54  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 110 ,loss= 1.0604866743087769
+2021-07-06 16:48:56  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 120 ,loss= 0.9977508187294006
+2021-07-06 16:48:58  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 130 ,loss= 1.098809003829956
+2021-07-06 16:49:00  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 140 ,loss= 1.1033836603164673
+2021-07-06 16:49:03  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 150 ,loss= 1.006085753440857
+2021-07-06 16:49:05  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 160 ,loss= 0.9757556915283203
+2021-07-06 16:49:07  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 170 ,loss= 1.0290563106536865
+2021-07-06 16:49:09  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 180 ,loss= 1.1657909154891968
+2021-07-06 16:49:11  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 190 ,loss= 1.2468398809432983
+2021-07-06 16:49:13  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 200 ,loss= 0.9032312035560608
+2021-07-06 16:49:15  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 210 ,loss= 1.077781081199646
+2021-07-06 16:49:17  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 220 ,loss= 1.0781856775283813
+2021-07-06 16:49:19  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 230 ,loss= 1.0255205631256104
+2021-07-06 16:49:21  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 240 ,loss= 0.9083582162857056
+2021-07-06 16:49:23  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 250 ,loss= 0.9035961627960205
+2021-07-06 16:49:25  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 260 ,loss= 1.072990894317627
+2021-07-06 16:49:27  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 270 ,loss= 0.6462903618812561
+2021-07-06 16:49:29  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 280 ,loss= 1.047243356704712
+2021-07-06 16:49:31  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 290 ,loss= 0.9330308437347412
+2021-07-06 16:49:34  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 300 ,loss= 1.0838842391967773
+2021-07-06 16:49:36  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 310 ,loss= 0.837104082107544
+2021-07-06 16:49:38  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 320 ,loss= 0.8925756812095642
+2021-07-06 16:49:40  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 330 ,loss= 0.6983523964881897
+2021-07-06 16:49:42  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 340 ,loss= 1.100639820098877
+2021-07-06 16:49:44  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 350 ,loss= 1.1713050603866577
+2021-07-06 16:49:46  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 360 ,loss= 1.0959428548812866
+2021-07-06 16:49:48  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 370 ,loss= 1.2739861011505127
+2021-07-06 16:49:50  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7413152456283569
+2021-07-06 16:49:52  client id= 0 ,round= 9 ,epoch= 1 ,client update iteration= 390 ,loss= 1.02701997756958
+******client id  1 ******
+client_update start
+2021-07-06 16:49:54  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 10 ,loss= 1.7429009675979614
+2021-07-06 16:49:56  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 20 ,loss= 1.311044454574585
+2021-07-06 16:49:58  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 30 ,loss= 1.2498105764389038
+2021-07-06 16:50:01  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 40 ,loss= 0.8472900390625
+2021-07-06 16:50:03  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 50 ,loss= 1.2523103952407837
+2021-07-06 16:50:05  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 60 ,loss= 1.0722434520721436
+2021-07-06 16:50:07  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 70 ,loss= 0.9922580718994141
+2021-07-06 16:50:09  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 80 ,loss= 1.0763585567474365
+2021-07-06 16:50:11  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 90 ,loss= 1.058946132659912
+2021-07-06 16:50:13  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 100 ,loss= 1.1728638410568237
+2021-07-06 16:50:15  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 110 ,loss= 1.1341698169708252
+2021-07-06 16:50:17  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 120 ,loss= 1.11909818649292
+2021-07-06 16:50:19  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 130 ,loss= 1.083741307258606
+2021-07-06 16:50:21  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 140 ,loss= 1.0152984857559204
+2021-07-06 16:50:23  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 150 ,loss= 1.1815093755722046
+2021-07-06 16:50:25  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 160 ,loss= 0.83104407787323
+2021-07-06 16:50:27  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 170 ,loss= 0.7541471123695374
+2021-07-06 16:50:29  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 180 ,loss= 1.2824634313583374
+2021-07-06 16:50:31  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 190 ,loss= 0.995718240737915
+2021-07-06 16:50:34  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 200 ,loss= 1.1838059425354004
+2021-07-06 16:50:36  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 210 ,loss= 0.9189515709877014
+2021-07-06 16:50:38  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 220 ,loss= 0.827377438545227
+2021-07-06 16:50:40  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 230 ,loss= 0.8723596334457397
+2021-07-06 16:50:42  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 240 ,loss= 0.8270120024681091
+2021-07-06 16:50:44  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 250 ,loss= 0.7252300381660461
+2021-07-06 16:50:46  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 260 ,loss= 1.0186004638671875
+2021-07-06 16:50:48  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 270 ,loss= 0.7959616780281067
+2021-07-06 16:50:50  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 280 ,loss= 0.8424084186553955
+2021-07-06 16:50:52  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 290 ,loss= 0.8838391304016113
+2021-07-06 16:50:54  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 300 ,loss= 0.8507741093635559
+2021-07-06 16:50:56  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 310 ,loss= 1.1955068111419678
+2021-07-06 16:50:58  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 320 ,loss= 0.9739145040512085
+2021-07-06 16:51:00  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 330 ,loss= 1.0758552551269531
+2021-07-06 16:51:03  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 340 ,loss= 1.1521114110946655
+2021-07-06 16:51:05  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 350 ,loss= 1.0434321165084839
+2021-07-06 16:51:07  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 360 ,loss= 0.9647098183631897
+2021-07-06 16:51:09  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 370 ,loss= 1.0963594913482666
+2021-07-06 16:51:11  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 380 ,loss= 0.7685011625289917
+2021-07-06 16:51:13  client id= 1 ,round= 9 ,epoch= 1 ,client update iteration= 390 ,loss= 1.103553295135498
+end_round_time 2021-07-06 16:51:13
+start add noise 2021-07-06 16:51:13
+***************************add noise test***************************
+test layer= 0
+***************************add noise test***************************
+test layer= 0
+end add noise time 2021-07-06 16:51:13
+average train loss= 1.0511871673871793
+2021-07-06 16:51:23,round 9,val Accuracy Top1: 24.480000 %
+2021-07-06 16:51:23,round 9,val Accuracy Top5: 71.010000 %
+start_round_time 2021-07-06 16:51:23
+******client id  0 ******
+client_update start
+2021-07-06 16:51:25  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 10 ,loss= 1.6757196187973022
+2021-07-06 16:51:27  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 20 ,loss= 1.3638235330581665
+2021-07-06 16:51:29  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 30 ,loss= 0.8373116254806519
+2021-07-06 16:51:31  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 40 ,loss= 0.8405734300613403
+2021-07-06 16:51:33  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 50 ,loss= 1.3382184505462646
+2021-07-06 16:51:35  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 60 ,loss= 1.1217927932739258
+2021-07-06 16:51:37  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 70 ,loss= 1.1313941478729248
+2021-07-06 16:51:39  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 80 ,loss= 1.216354489326477
+2021-07-06 16:51:41  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 90 ,loss= 1.0607810020446777
+2021-07-06 16:51:43  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 100 ,loss= 1.0664916038513184
+2021-07-06 16:51:45  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 110 ,loss= 1.1592323780059814
+2021-07-06 16:51:48  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 120 ,loss= 1.1613061428070068
+2021-07-06 16:51:50  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 130 ,loss= 0.9391776919364929
+2021-07-06 16:51:52  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 140 ,loss= 0.8227755427360535
+2021-07-06 16:51:54  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 150 ,loss= 1.3444331884384155
+2021-07-06 16:51:56  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 160 ,loss= 1.0530316829681396
+2021-07-06 16:51:58  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 170 ,loss= 1.1110165119171143
+2021-07-06 16:52:00  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 180 ,loss= 0.899947464466095
+2021-07-06 16:52:02  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 190 ,loss= 0.9300894141197205
+2021-07-06 16:52:04  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 200 ,loss= 0.7819107174873352
+2021-07-06 16:52:06  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 210 ,loss= 0.811850905418396
+2021-07-06 16:52:08  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 220 ,loss= 0.8916543126106262
+2021-07-06 16:52:10  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 230 ,loss= 0.796771228313446
+2021-07-06 16:52:13  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 240 ,loss= 1.027232050895691
+2021-07-06 16:52:15  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 250 ,loss= 0.674380362033844
+2021-07-06 16:52:17  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 260 ,loss= 1.3236786127090454
+2021-07-06 16:52:19  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 270 ,loss= 0.92554771900177
+2021-07-06 16:52:21  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 280 ,loss= 0.953243613243103
+2021-07-06 16:52:23  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 290 ,loss= 0.6301164031028748
+2021-07-06 16:52:25  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 300 ,loss= 1.2611727714538574
+2021-07-06 16:52:27  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 310 ,loss= 1.0944135189056396
+2021-07-06 16:52:29  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 320 ,loss= 0.8282149434089661
+2021-07-06 16:52:31  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 330 ,loss= 0.629778265953064
+2021-07-06 16:52:33  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 340 ,loss= 0.8425777554512024
+2021-07-06 16:52:35  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 350 ,loss= 0.9499538540840149
+2021-07-06 16:52:37  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 360 ,loss= 1.1724990606307983
+2021-07-06 16:52:40  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 370 ,loss= 0.8101224303245544
+2021-07-06 16:52:42  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 380 ,loss= 0.8887138962745667
+2021-07-06 16:52:44  client id= 0 ,round= 10 ,epoch= 1 ,client update iteration= 390 ,loss= 0.7703669667243958
+******client id  1 ******
+client_update start
+2021-07-06 16:52:46  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 10 ,loss= 1.403598427772522
+2021-07-06 16:52:48  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 20 ,loss= 1.5178229808807373
+2021-07-06 16:52:50  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 30 ,loss= 1.2210923433303833
+2021-07-06 16:52:52  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 40 ,loss= 1.0460577011108398
+2021-07-06 16:52:54  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 50 ,loss= 0.9590522646903992
+2021-07-06 16:52:56  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 60 ,loss= 0.7996436953544617
+2021-07-06 16:52:58  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 70 ,loss= 0.8594216108322144
+2021-07-06 16:53:00  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 80 ,loss= 1.1208174228668213
+2021-07-06 16:53:02  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 90 ,loss= 0.8238490223884583
+2021-07-06 16:53:05  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 100 ,loss= 0.82908034324646
+2021-07-06 16:53:07  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 110 ,loss= 1.1571993827819824
+2021-07-06 16:53:09  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 120 ,loss= 0.9581137299537659
+2021-07-06 16:53:11  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 130 ,loss= 0.8490748405456543
+2021-07-06 16:53:13  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 140 ,loss= 1.1537669897079468
+2021-07-06 16:53:15  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 150 ,loss= 0.7992870211601257
+2021-07-06 16:53:17  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 160 ,loss= 0.8976935148239136
+2021-07-06 16:53:19  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 170 ,loss= 0.7600013017654419
+2021-07-06 16:53:21  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 180 ,loss= 0.902728796005249
+2021-07-06 16:53:23  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 190 ,loss= 0.7127119302749634
+2021-07-06 16:53:25  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 200 ,loss= 1.0270668268203735
+2021-07-06 16:53:27  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 210 ,loss= 0.7872916460037231
+2021-07-06 16:53:29  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 220 ,loss= 0.976579487323761
+2021-07-06 16:53:32  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 230 ,loss= 1.0720484256744385
+2021-07-06 16:53:34  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 240 ,loss= 0.8208385109901428
+2021-07-06 16:53:36  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 250 ,loss= 1.154747486114502
+2021-07-06 16:53:38  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 260 ,loss= 0.8732028007507324
+2021-07-06 16:53:40  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 270 ,loss= 0.7409477829933167
+2021-07-06 16:53:42  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 280 ,loss= 0.8060462474822998
+2021-07-06 16:53:44  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 290 ,loss= 1.0409860610961914
+2021-07-06 16:53:46  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 300 ,loss= 1.2650692462921143
+2021-07-06 16:53:48  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 310 ,loss= 0.9684794545173645
+2021-07-06 16:53:50  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 320 ,loss= 0.9477072358131409
+2021-07-06 16:53:52  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 330 ,loss= 1.0671800374984741
+2021-07-06 16:53:54  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 340 ,loss= 0.871311366558075
+2021-07-06 16:53:56  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 350 ,loss= 1.0085450410842896
+2021-07-06 16:53:58  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 360 ,loss= 0.8137711882591248
+2021-07-06 16:54:01  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 370 ,loss= 0.7960017919540405
+2021-07-06 16:54:03  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 380 ,loss= 1.1801624298095703
+2021-07-06 16:54:05  client id= 1 ,round= 10 ,epoch= 1 ,client update iteration= 390 ,loss= 1.0102825164794922
+end_round_time 2021-07-06 16:54:05
+start add noise 2021-07-06 16:54:05
+***************************add noise test***************************
+test layer= 0
+***************************add noise test***************************
+test layer= 0
+end add noise time 2021-07-06 16:54:05
+average train loss= 1.0146760749237616
+2021-07-06 16:54:15,round 10,val Accuracy Top1: 29.620000 %
+2021-07-06 16:54:15,round 10,val Accuracy Top5: 79.340000 %
